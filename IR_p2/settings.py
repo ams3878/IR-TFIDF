@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["172.101.186.202"]
 # Application definition
 
 INSTALLED_APPS = [
+    'ponyportal.apps.PonyportalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
