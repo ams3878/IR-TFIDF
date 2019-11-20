@@ -7,8 +7,7 @@
     <title>Home</title>
 </head>
 <body>
-<div id="title-results">
-<a href="https://fontmeme.com/fonts/my-little-pony-font/"><img src="https://fontmeme.com/permalink/191119/a3a8a8436acf9f3088d264d383938a34.png" alt="my-little-pony-font" border="0"></a></div>
+<a id="title-art" href="https://fontmeme.com/fonts/my-little-pony-font/"><img src="https://fontmeme.com/permalink/191119/a3a8a8436acf9f3088d264d383938a34.png" alt="my-little-pony-font" border="0"></a>
 <div id="cover-results">
     <form method="get" action="./results">
         <div class="tb">
@@ -22,16 +21,29 @@
         </div>
     </form>
 </div>
-<div id="results-frame">
-    <ul>
-    {% for char in list %}
-        {% if char.id %}
-            <li><a href="../static/episodes_tags/{{char.id}}.html">{{ char.id }}</a></li>
-        {% else %}
-            <li>{{ char}}</li>
-        {% endif %}
-    {% endfor %}
-    </ul>
+<div class="tb">
+    <div class="td" id="results-frame-1">
+        <ul>
+            <h1>
+                {{ results_header }}
+                {% for char in terms_list %}
+                    {{char}}
+                {% endfor %}
+
+            </h1>
+            {% for episode, body in result_dict.items %}
+            <li><a href="../static/episodes_tags/{{episode.id}}.html">{{ episode.title }}</a></li>
+                {% for line in body %}
+                {% autoescape off %}
+                <p> {{line}} </p>
+                    {% endautoescape %}
+                {% endfor %}
+            {% endfor %}
+
+        </ul>
+    </div>
+    <div class="td" id="results-frame-2">
+    </div>
 </div>
 </body>
 </html>

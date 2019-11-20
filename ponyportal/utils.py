@@ -17,6 +17,7 @@ def create_episode_files(master, ep_loc):
         meta = "meta[ "
         script = ''
         script_tag = ''
+        script_html = ''
         try:
             if line_list[0].split()[0] == '<h2':
                 count += 1
@@ -33,17 +34,23 @@ def create_episode_files(master, ep_loc):
                         pass
                     if line != '':
                         clean_line = cleanhtml(line)
-                        script_tag = script_tag + line
-                        if clean_line != '\n':
-                            script = script + clean_line
+                        script_html = script_html + line
+                        if clean_line[1] != '\n':
+                            script_tag = script_tag + clean_line[1]
+                            line_count += 1
+                        if clean_line[0] != '\n':
+                            script = script + clean_line[0]
                             line_count += 1
                     line = f.readline()
                     line_list = line.split('>')
                 meta = meta + ', lines: ' + str(line_count) + "]\n"
-                f_new_tags = open(ep_loc[:-1] + "_tags\\" + str(count) + '.html', 'w')
+                f_new_tags = open(ep_loc[:-1] + "_html\\" + str(count) + '.html', 'w')
                 f_new_tags.write(meta)
-                f_new_tags.write(script_tag)
+                f_new_tags.write(script_html)
                 f_new_tags.close()
+                f_new = open(ep_loc[:-1] + "_tags\\" + str(count), 'w')
+                f_new.write(meta)
+                f_new.write(script_tag)
                 f_new = open(ep_loc + str(count), 'w')
                 f_new.write(meta)
                 f_new.write(script)
@@ -63,13 +70,15 @@ def cleanhtml(raw_html):
     find_name = re.compile('</dd><dd><b>.*?</b>')
 
     temp = re.match(find_name, raw_html)
+    tagged = raw_html
     if temp:
         match = temp.group(0).split('<b>')[1].split('</b>')[0]
-        raw_html = re.sub(find_name, '%%' + match + '%%',  raw_html)
+        tagged = re.sub(find_name, '%%' + match + '%%',  raw_html)
 
     cleanr = re.compile('<.*?>')
+    taggedtext = re.sub(cleanr, '', tagged)
     cleantext = re.sub(cleanr, '', raw_html)
-    return cleantext
+    return cleantext, taggedtext
 
 
 def create_new_chars():
@@ -137,3 +146,21 @@ def create_char_episode():
                 pass
             line = f.readline()
     print("Done adding chars to docs")
+
+def get_lines_keywords(terms, episode):
+    f = open('ponyportal\static\episodes\\' + str(episode), 'r')
+    matched_lines = []
+    for line in f:
+        line_list = line.split()
+        match = 0
+        temp_line = ""
+        for word in line_list:
+            temp_word = word
+            clean_word = re.sub(r'[^\w\s]', '', word)
+            if clean_word in terms:
+                match = 1
+                temp_word = "<b>" + temp_word + "</b>"
+            temp_line = temp_line + temp_word + ' '
+        if match:
+            matched_lines.append(temp_line)
+    return matched_lines

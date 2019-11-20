@@ -71,49 +71,63 @@ input, button
     box-shadow: 0 10px 40px #ffffffeb, 0 0 0 20px #ff7575;
     transform: scale(0.6);
 }
-#title-results
-{
+
+#title-art{
     position: absolute;
     top: 10%;
-    left: 10px;
-    right: 0;
-    width: 880px;
+    left: 3%;
+    right: 3%;
     padding: 35px;
     margin: -83px auto 0 auto;
     background-color: #ffd8d8;
     border-radius: 20px;
     box-shadow: 0 10px 40px #ffffffeb, 0 0 0 20px #ff7575;
-    transform: scale(0.6);
+    transform: scale(.6);
+    text-align: center;
 }
 
 #cover-results
 {
     position: absolute;
     top: 25%;
-    left: 0;
-    right: 0;
-    width: 550px;
+    left: 1%;
+    right: 1%;
     padding: 35px;
     margin: -83px auto 0 auto;
     background-color: #ffd8d8;
     border-radius: 20px;
     box-shadow: 0 10px 40px #ffffffeb, 0 0 0 20px #ff7575;
-    transform: scale(0.6);
+    transform: scale(0.3);
 }
 
-#results-frame
+#results-frame-1
 {
     position: absolute;
     top: 45%;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 40%;
     padding: 35px;
     margin: -83px auto 0 auto;
     background-color: #ffd8d8;
     border-radius: 20px;
     box-shadow: 0 10px 40px #ffffffeb, 0 0 0 20px #ff7575;
-    transform: scale(0.6);
+    transform: scale(1.0);
 }
+
+#results-frame-2
+{
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    right: 5%;
+    padding: 35px;
+    margin: -83px auto 0 auto;
+    background-color: #ffd8d8;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #ffffffeb, 0 0 0 20px #ff7575;
+    transform: scale(1.0);
+}
+
 form
 {
     height: 96px;

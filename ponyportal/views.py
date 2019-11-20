@@ -15,7 +15,15 @@ def index(request):
 
 def results(request):
     terms = request.GET['query'].split()
-    context = {'list': terms}
+    result_dict = {}
+    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)[0:5]
+    for i in doc_list:
+        result_dict[i] = get_lines_keywords(terms, i.id)[0:5]
+
+    context = {'results_header': "Results for query...",
+               'terms_list': terms,
+               'result_dict': result_dict,
+               }
     return render(request, 'home/results.html', context)
 
 
