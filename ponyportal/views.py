@@ -13,13 +13,19 @@ def index(request):
     return HttpResponse('Index HERE')
 
 
+def results(request):
+    terms = request.GET['query'].split()
+    context = {'list': terms}
+    return render(request, 'home/results.html', context)
+
+
 def ponies(request):
     #create_new_chars()
     #create_char_episode()
     chars = sorted(list(Character.objects.all()), key=lambda x: x.id)
     context = {'list': chars,
                }
-    return render(request, 'ponies/list.html', context)
+    return render(request, 'home/list.html', context)
 
 
 def episodes(request):
@@ -27,4 +33,4 @@ def episodes(request):
     episodes = sorted(list(Document.objects.all()), key=lambda x: x.id)
     context = {'list': episodes,
                }
-    return render(request, 'ponies/list.html', context)
+    return render(request, 'home/list.html', context)

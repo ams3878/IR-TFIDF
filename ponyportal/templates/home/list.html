@@ -9,7 +9,11 @@
 <body>
     <ul>
     {% for char in list %}
-        <li><a href="../static/episodes_tags/{{char.id}}.html">{{ char.id }}</a></li>
+        {% if char.id %}
+            <li><a href="../static/episodes_tags/{{char.id}}.html">{{ char.id }}</a></li>
+        {% else %}
+            <li>{{ char}}</li>
+        {% endif %}
     {% endfor %}
     </ul>
 </body>
