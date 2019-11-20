@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ponyportal/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <ul>
+    {% for char in list %}
+        <li><a href="../static/episodes_tags/{{char.id}}.html">{{ char.id }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

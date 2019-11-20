@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -31,7 +30,7 @@ ALLOWED_HOSTS = ["172.101.186.202"]
 # Application definition
 
 INSTALLED_APPS = [
-    'ponyportal.apps.PonyportalConfig',
+    'ponyportal.apps.ponyportalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

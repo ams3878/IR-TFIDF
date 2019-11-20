@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PonyportalConfig(AppConfig):
+class ponyportalConfig(AppConfig):
     name = 'ponyportal'
