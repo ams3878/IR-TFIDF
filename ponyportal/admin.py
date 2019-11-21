@@ -4,3 +4,5 @@ from .models import *
 admin.site.register(Character)
 admin.site.register(Document)
 admin.site.register(CharacterToDocument)
+admin.site.register(Season)
+admin.site.register(SeasonToDocument)

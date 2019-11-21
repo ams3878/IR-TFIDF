@@ -1,5 +1,7 @@
 import re
+from math import ceil
 from .models import *
+from copy import deepcopy
 # ----------------------------------------------------------
 #
 # Get all the episodes from master text
@@ -54,10 +56,28 @@ def create_episode_files(master, ep_loc):
                 f_new = open(ep_loc + str(count), 'w')
                 f_new.write(meta)
                 f_new.write(script)
-                q = Document(id=count,
-                             title=title,
-                             )
-                q.save()
+                season = get_season(count)
+                season_obj = Season.objects.filter(id=season)
+                if not season_obj:
+                    q = Season(id=season)
+                    q.save()
+                    season_obj = Season.objects.filter(id=season)
+                doc_obj = Document.objects.filter(id=count)
+                if not doc_obj:
+                    if season >= 10:
+                        script_type = 'feature'
+                    else:
+                        script_type = 'episode'
+                    q = Document(id=count,
+                                 title=title,
+                                 script_type=script_type,
+                                 )
+                    q.save()
+                    doc_obj = Document.objects.filter(id=count)
+                season_doc_obj = SeasonToDocument.objects.filter(episode=doc_obj[0], season=season_obj[0])
+                if not season_doc_obj:
+                    q = SeasonToDocument(episode=doc_obj[0], season=season_obj[0])
+                    q.save()
                 f_new.close()
 
         except IndexError:
@@ -87,7 +107,7 @@ def create_new_chars():
     for c in chars_set:
         chars.append(c.id)
     for i in range(243):
-        f = open('ponyportal\static\episodes\\' + str(i+1))
+        f = open('ponyportal\static\episodes_tags\\' + str(i+1))
         meta = f.readline()
         line = f.readline()
         while line:
@@ -97,15 +117,12 @@ def create_new_chars():
 
                 if temp:
                     name = temp.group(0)[2:-2]
-                    char = name.split('and')
-                    if len(char) > 1 and char[1] not in chars:
-                        q = Character(id=re.sub(r'\W+', '', char[1]))
-                        q.save()
-                        chars.append(char[1])
-                    char = char[0].split(',')
+                    char = re.sub(r'\bbut.*', '', name)
+                    char = re.sub(r'\bexcept.*', '', char)
+                    char = (re.sub(r'\band\b', ',', char)).split(',')
                     for c in char:
                         if c not in chars:
-                            q = Character(id=re.sub(r'\W+', '', c))
+                            q = Character(id=re.sub(r'[^\w\s]', '', c))
                             q.save()
                             chars.append(c)
             except IndexError:
@@ -147,6 +164,7 @@ def create_char_episode():
             line = f.readline()
     print("Done adding chars to docs")
 
+
 def get_lines_keywords(terms, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
     matched_lines = []
@@ -156,7 +174,7 @@ def get_lines_keywords(terms, episode):
         temp_line = ""
         for word in line_list:
             temp_word = word
-            clean_word = re.sub(r'[^\w\s]', '', word)
+            clean_word = re.sub(r'[^\w\s]', '', word).lower()
             if clean_word in terms:
                 match = 1
                 temp_word = "<b>" + temp_word + "</b>"
@@ -164,3 +182,16 @@ def get_lines_keywords(terms, episode):
         if match:
             matched_lines.append(temp_line)
     return matched_lines
+
+
+def get_season(episode):
+    if episode <= 52:
+        return ceil(episode / 26)
+    elif episode <= 65:
+        return 3
+    elif episode <= 221:
+        return 3 + ceil((episode - 65) / 26)
+    elif episode <= 239:
+        return 10
+    else:
+        return episode - 239 + 10

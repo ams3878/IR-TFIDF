@@ -12,8 +12,19 @@ class Character(models.Model):
 class Document(models.Model):
     id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=200)
+    script_type = models.CharField(max_length=200)
 
 
 class CharacterToDocument(models.Model):
     character = models.ForeignKey('Character', on_delete=models.DO_NOTHING)
     episode = models.ForeignKey('Document', on_delete=models.DO_NOTHING)
+
+
+class Season(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=200)
+
+
+class SeasonToDocument(models.Model):
+    episode = models.ForeignKey('Document', on_delete=models.DO_NOTHING)
+    season = models.ForeignKey('Season', on_delete=models.DO_NOTHING)

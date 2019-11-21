@@ -14,11 +14,21 @@ def index(request):
 
 
 def results(request):
-    terms = request.GET['query'].split()
     result_dict = {}
-    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)[0:5]
+    terms = []
+
+    # query expansion, and pre processing here stored to terms
+    terms_temp = request.GET['query'].split()
+    for i in terms_temp:
+        terms.append(i.lower())
+    # ranked query results here stored to doc_list
+    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)
     for i in doc_list:
-        result_dict[i] = get_lines_keywords(terms, i.id)[0:5]
+        line_matches = get_lines_keywords(terms, i.id)[0:5]
+        if len(line_matches) != 0:
+            result_dict[i] = line_matches
+        if len(result_dict.keys()) == 5:
+            break
 
     context = {'results_header': "Results for query...",
                'terms_list': terms,
@@ -28,8 +38,7 @@ def results(request):
 
 
 def ponies(request):
-    #create_new_chars()
-    #create_char_episode()
+
     chars = sorted(list(Character.objects.all()), key=lambda x: x.id)
     context = {'list': chars,
                }
@@ -37,8 +46,14 @@ def ponies(request):
 
 
 def episodes(request):
-    #create_episode_files("ponyportal\static\All_transcripts.txt", "ponyportal\static\episodes\\")
     episodes = sorted(list(Document.objects.all()), key=lambda x: x.id)
     context = {'list': episodes,
                }
     return render(request, 'home/list.html', context)
+
+
+def main(request):
+    #create_new_chars()
+    #create_char_episode()
+    #create_episode_files("ponyportal\static\All_transcripts.txt", "ponyportal\static\episodes\\")
+    return HttpResponse("running some function....")
