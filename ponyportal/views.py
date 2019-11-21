@@ -22,14 +22,14 @@ def results(request):
     for i in terms_temp:
         terms.append(i.lower())
     # ranked query results here stored to doc_list
-    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)
+    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)[:1]
     for i in doc_list:
         line_matches = get_lines_keywords(terms, i.id)[0:5]
         if len(line_matches) != 0:
             result_dict[i] = line_matches
         if len(result_dict.keys()) == 5:
             break
-
+    print(result_dict)
     context = {'results_header': "Results for query...",
                'terms_list': terms,
                'result_dict': result_dict,

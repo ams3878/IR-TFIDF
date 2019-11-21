@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'ponyportal/style.css' %}">
-    <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Results</title>
 </head>
 <body>
 <a id="title-art" href="https://fontmeme.com/fonts/my-little-pony-font/"><img src="https://fontmeme.com/permalink/191119/a3a8a8436acf9f3088d264d383938a34.png" alt="my-little-pony-font" border="0"></a>
@@ -32,7 +33,7 @@
 
             </h1>
             {% for episode, body in result_dict.items %}
-            <li><a href="../static/episodes_tags/{{episode.id}}.html">{{ episode.title }}</a></li>
+            <li><a href="../static/episodes_html/{{episode.id}}.html">{{ episode.title }}</a></li>
                 {% for line in body %}
                 {% autoescape off %}
                 <p> {{line}} </p>

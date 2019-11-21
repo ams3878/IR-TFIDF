@@ -38,24 +38,25 @@ def create_episode_files(master, ep_loc):
                         clean_line = cleanhtml(line)
                         script_html = script_html + line
                         if clean_line[1] != '\n':
-                            script_tag = script_tag + clean_line[1]
                             line_count += 1
+                            script_tag = script_tag + clean_line[1]
                         if clean_line[0] != '\n':
                             script = script + clean_line[0]
-                            line_count += 1
                     line = f.readline()
                     line_list = line.split('>')
                 meta = meta + ', lines: ' + str(line_count) + "]\n"
-                f_new_tags = open(ep_loc[:-1] + "_html\\" + str(count) + '.html', 'w')
+                f_new_tags = open(ep_loc[:-1] + "_tags\\" + str(count), 'w')
                 f_new_tags.write(meta)
-                f_new_tags.write(script_html)
+                f_new_tags.write(script_tag)
                 f_new_tags.close()
-                f_new = open(ep_loc[:-1] + "_tags\\" + str(count), 'w')
-                f_new.write(meta)
-                f_new.write(script_tag)
+                f_new_html = open(ep_loc[:-1] + "_html\\" + str(count) + '.html', 'w')
+                f_new_html.write(meta)
+                f_new_html.write(script_html)
+                f_new_html.close()
                 f_new = open(ep_loc + str(count), 'w')
                 f_new.write(meta)
                 f_new.write(script)
+                f_new.close()
                 season = get_season(count)
                 season_obj = Season.objects.filter(id=season)
                 if not season_obj:
@@ -169,7 +170,8 @@ def get_lines_keywords(terms, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
     matched_lines = []
     for line in f:
-        line_list = line.split()
+        print(line)
+        line_list = re.sub(r':', ' ', line).split()
         match = 0
         temp_line = ""
         for word in line_list:

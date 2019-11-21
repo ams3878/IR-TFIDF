@@ -80,7 +80,8 @@ DATABASES = {
     }
 }
 
-
+DEFAULT_CHARSET = 'UTF-8'
+FILE_CHARSET = 'UTF-8'
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
