@@ -170,7 +170,6 @@ def get_lines_keywords(terms, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
     matched_lines = []
     for line in f:
-        print(line)
         line_list = re.sub(r':', ' ', line).split()
         match = 0
         temp_line = ""

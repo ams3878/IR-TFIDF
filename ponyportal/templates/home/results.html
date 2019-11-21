@@ -12,7 +12,7 @@
 <div id="cover-results">
     <form method="get" action="./results">
         <div class="tb">
-            <div class="td"><input name="query" type="text" placeholder="Search" required></div>
+            <div class="td"><input name="query" type="text" value="{{term_string}}" required></div>
             <div class="td" id="s-cover">
                 <button type="submit">
                     <div id="s-circle"></div>
@@ -25,18 +25,17 @@
 <div class="tb">
     <div class="td" id="results-frame-1">
         <ul>
-            <h1>
+            {% if results_header %}
+            <div class="results-header">
                 {{ results_header }}
-                {% for char in terms_list %}
-                    {{char}}
-                {% endfor %}
+            </div>
+            {% endif %}
 
-            </h1>
             {% for episode, body in result_dict.items %}
-            <li><a href="../static/episodes_html/{{episode.id}}.html">{{ episode.title }}</a></li>
+            <li class="results-title"><a href="../static/episodes_html/{{episode.id}}.html">{{ episode.title }}</a></li>
                 {% for line in body %}
                 {% autoescape off %}
-                <p> {{line}} </p>
+                <p class="results-body"> {{line}} </p>
                     {% endautoescape %}
                 {% endfor %}
             {% endfor %}

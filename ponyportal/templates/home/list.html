@@ -8,11 +8,13 @@
 </head>
 <body>
     <ul>
-    {% for char in list %}
-        {% if char.id %}
-            <li><a href="../static/episodes_tags/{{char.id}}.html">{{ char.id }}</a></li>
+        {% for char in list %}
+        {% if char.title %}
+        <li><a href="../static/episodes_html/{{char.id}}.html">{{ char.title }}</a></li>
+        {% elif char.id %}
+        <li><a href=".">{{ char.id }}</a></li>
         {% else %}
-            <li>{{ char}}</li>
+        {{char}}
         {% endif %}
     {% endfor %}
     </ul>

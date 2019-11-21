@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
 from .utils import *
-
+from .query_handler import query
 
 def home(request):
     context = {}
@@ -15,24 +15,32 @@ def index(request):
 
 def results(request):
     result_dict = {}
-    terms = []
+    term_string = request.GET['query']
+    if term_string == '#episodes':
+        return episodes(request)
+    elif term_string == '#characters':
+        return ponies(request)
 
+    terms = term_string.split()
     # query expansion, and pre processing here stored to terms
-    terms_temp = request.GET['query'].split()
-    for i in terms_temp:
-        terms.append(i.lower())
+
     # ranked query results here stored to doc_list
-    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)[:1]
+    # doc_list = sorted(query(term_string), key=lambda x: x[1])[0:5]
+    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)
     for i in doc_list:
         line_matches = get_lines_keywords(terms, i.id)[0:5]
         if len(line_matches) != 0:
             result_dict[i] = line_matches
         if len(result_dict.keys()) == 5:
             break
-    print(result_dict)
-    context = {'results_header': "Results for query...",
+    if len(result_dict) == 0:
+        results_header = "Sorry, no results for " + term_string + " was a problem with the query"
+    else:
+        results_header = ""
+    context = {'results_header': results_header,
                'terms_list': terms,
                'result_dict': result_dict,
+               'term_string': term_string,
                }
     return render(request, 'home/results.html', context)
 

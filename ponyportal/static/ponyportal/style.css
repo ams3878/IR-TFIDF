@@ -32,6 +32,18 @@ body
     vertical-align: middle;
 }
 
+li.results-title{
+    font-size: 25px;
+
+}
+
+p.results-body{
+    font-size: 12px;
+
+}
+p b{
+    font-size: 14px;
+}
 input, button
 {
     color: #fff;
@@ -40,6 +52,10 @@ input, button
     margin: 0;
     border: 0;
     background-color: transparent;
+}
+.results-header{
+    font-size: 12px;
+    padding-bottom: 10px;
 }
 
 #title
