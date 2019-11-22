@@ -86,6 +86,23 @@ def create_episode_files(master, ep_loc):
     f.close()
     print("DONE-adding episodes")
 
+def get_index(filename):
+    index = {}
+    with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
+        line = index_file.readline()
+        while line:
+            line = line.split('\t')
+            posting_list = line[2:]
+            posting_dict = {'docs': {}}
+            for posting in posting_list:
+                posting = posting.split(':')
+                posting_dict['count'] = str(line[1])
+                posting_dict['docs'][posting[0]] = int(posting[1])
+            index[line[0]] = posting_dict
+
+            line = index_file.readline()
+    return index
+
 
 def cleanhtml(raw_html):
     find_name = re.compile('</dd><dd><b>.*?</b>')
@@ -166,22 +183,27 @@ def create_char_episode():
     print("Done adding chars to docs")
 
 
+def get_lines_keywords_better(terms, episode):
+    f = open('ponyportal\static\episodes\\' + str(episode), 'r')
+    lines = f.read()
+    print(lines)
+    for i in terms:
+        lines = lines.replace(i, "<b>"+i+"</b>")
+    f.close()
+    return lines
+
+
 def get_lines_keywords(terms, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
     matched_lines = []
     for line in f:
-        line_list = re.sub(r':', ' ', line).split()
-        match = 0
-        temp_line = ""
-        for word in line_list:
-            temp_word = word
-            clean_word = re.sub(r'[^\w\s]', '', word).lower()
-            if clean_word in terms:
-                match = 1
-                temp_word = "<b>" + temp_word + "</b>"
-            temp_line = temp_line + temp_word + ' '
-        if match:
+        temp_line = line.lower()
+        for i in terms:
+            temp_line = temp_line.replace(i, "<b>" + i + "</b>")
+
+        if line.lower() != temp_line:
             matched_lines.append(temp_line)
+    f.close()
     return matched_lines
 
 
