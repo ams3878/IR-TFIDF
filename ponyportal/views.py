@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .utils import *
-from .query_handler import query
+from .retrieval_algorithms import query
+from .query_expansion import  expand_term
 import time
 
 # reverse index TSV
@@ -31,7 +32,7 @@ def results(request):
 
     terms = term_string.split()
     # query expansion, and pre processing here stored to terms
-
+    terms = expand_term(terms, 'none')
     # ranked query results here stored to doc_list
     doc_list = query(term_string, INDEX_DOC_FREQ, 'tfidf')
     t2 = time.time_ns()
