@@ -13,26 +13,23 @@ def query(query_string):
     for i in range(243):
         docs[i+1] = ('None', 0)
     num_docs = len(docs) * 1.0
+    doc_sums = {}
     doc_scores = []
+    for term in terms:
+        idf = find_idf(term, index, num_docs)
+        try:
+            for doc, frequency in index[term]['docs'].items():
+                tf = math.log(frequency + 1)
+                tf_idf = tf*idf
+                try:
+                    doc_sums[doc] = (doc_sums[doc][0] + tf_idf, doc_sums[doc][1] + math.pow(tf_idf, 2))
+                except KeyError:
+                    doc_sums[doc] = (tf_idf, math.pow(tf_idf, 2))
 
-    for doc in docs:
-        sum_terms = 0.0
-        sum_sq_terms = 0.0
-        for term in terms:
-            tf = find_term_count(term, index, doc)
-            if tf > 0:
-                print("found it")
-                tf = math.log(tf)
-            tf += 1
-            idf = find_idf(term, index, num_docs)
-            tf_idf = tf*idf
-            sum_sq_terms += math.pow(tf_idf, 2)
-            sum_terms += tf_idf
-        if sum_sq_terms != 0:
-            doc_score = sum_terms/(math.sqrt(sum_sq_terms))
-        if doc_score != 1:
-            doc_scores.append((doc, doc_score))
-
+        except KeyError:
+            continue
+    for i, sums in doc_sums.items():
+        doc_scores.append((i, sums[0]/sums[1]))
     doc_scores = sorted(doc_scores, key=lambda tup: tup[1], reverse=True)
     return doc_scores
 
@@ -76,11 +73,11 @@ def get_index():
         while line:
             line = line.split('\t')
             posting_list = line[2:]
-            posting_dict = {}
+            posting_dict = {'docs': {}}
             for posting in posting_list:
                 posting = posting.split(':')
                 posting_dict['count'] = str(line[1])
-                posting_dict[posting[0]] = int(posting[1])
+                posting_dict['docs'][posting[0]] = int(posting[1])
             index[line[0]] = posting_dict
 
             line = index_file.readline()

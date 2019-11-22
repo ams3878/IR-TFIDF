@@ -25,16 +25,14 @@ def results(request):
     # query expansion, and pre processing here stored to terms
 
     # ranked query results here stored to doc_list
-    # doc_list = sorted(query(term_string), key=lambda x: x[1])[0:5]
-    doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)
+    doc_list = sorted(query(term_string), key=lambda x: x[1])
+    print(doc_list)
+    # doc_list = sorted(list(Document.objects.all()), key=lambda x: x.id)
     for i in doc_list:
-        line_matches = get_lines_keywords(terms, i.id)[0:5]
-        if len(line_matches) != 0:
-            result_dict[i] = line_matches
-        if len(result_dict.keys()) == 5:
-            break
+        result_dict[Document.objects.filter(id=i[0])[0].title] = get_lines_keywords(terms, i[0])[0:5]
+
     if len(result_dict) == 0:
-        results_header = "Sorry, no results for " + term_string + " was a problem with the query"
+        results_header = "Sorry, no results for " + term_string + " or there is a problem with the query"
     else:
         results_header = ""
     context = {'results_header': results_header,
