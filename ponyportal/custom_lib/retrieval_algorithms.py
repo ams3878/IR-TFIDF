@@ -6,8 +6,7 @@ def query(query_string, index, query_model):
         return tfidf(query_string, index)
 
 
-def tfidf(query_string, index):
-    terms = query_string.split()
+def tfidf(terms, index):
     docs = {}
     for i in range(243):
         docs[i+1] = ('None', 0)

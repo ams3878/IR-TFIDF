@@ -1,6 +1,6 @@
 import re
 from math import ceil
-from .models import *
+from ..models import *
 from copy import deepcopy
 # ----------------------------------------------------------
 #
@@ -86,6 +86,7 @@ def create_episode_files(master, ep_loc):
     f.close()
     print("DONE-adding episodes")
 
+
 def get_index(filename):
     index = {}
     with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
@@ -102,6 +103,17 @@ def get_index(filename):
 
             line = index_file.readline()
     return index
+
+
+def get_stems(filename):
+    stems = {}
+    with open('ponyportal\static\ponyportal\\' + filename, 'r') as stem_file:
+        line = stem_file.readline()
+        while line:
+            line = line.split('\t')
+            stems[line[0]] = line[1:-1]
+            line = stem_file.readline()
+    return stems
 
 
 def cleanhtml(raw_html):
@@ -200,11 +212,11 @@ def get_lines_keywords(terms, episode):
         temp_line = line.lower()
         for i in terms:
             temp_line = temp_line.replace(i, "<b>" + i + "</b>")
-
+            print("FOUND MATCH")
         if line.lower() != temp_line:
             matched_lines.append(temp_line)
     f.close()
-    return matched_lines
+    return matched_lines[0:5]
 
 
 def get_season(episode):

@@ -2,12 +2,13 @@ import re
 import os
 import string
 from nltk.tokenize import word_tokenize
-from nltk.tokenize import punkt
+from .utils import get_index
+from .porter import PorterStemmer
 
-INDEX_FILE_NAME = 'static\ponyportal\mlp_index.tsv'
+INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_index.tsv"
+STEM_FILE_NAME = "ponyportal\static\ponyportal\mlp_stems.tsv"
 
-
-def main():
+def create_index_tsv():
     index = {}
     for filename in os.listdir('./static/episodes'):
         formatted_filename = os.path.join('./static/episodes', filename)
@@ -21,7 +22,7 @@ def main():
 
             words = doc_text.split(' ')
 
-            doc_index = index_doc(doc_text)
+            doc_index = tokenize_doc(doc_text)
 
             for token in doc_index:
                 index_str = doc_num + ':' + str(doc_index[token])
@@ -30,13 +31,31 @@ def main():
                 else:
                     index[token] += ('\t' + index_str)
 
-
     # Write index to a file
     with open(INDEX_FILE_NAME, 'w') as output_file:
         for key in sorted(index.keys()):
             line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
             output_file.write(line)
 
+
+def create_stems(index_tsv):
+    vocab = list(get_index(index_tsv).keys())
+    stemmer = PorterStemmer()
+    stems = [stemmer.stem(word) for word in vocab]
+    stem_dict = {}
+    for i in range(len(stems)):
+        try:
+            stem_dict[stems[i]].append(vocab[i])
+        except KeyError:
+            stem_dict[stems[i]] = [vocab[i]]
+    with open(STEM_FILE_NAME, 'w') as f:
+        for stem, word_list in sorted(stem_dict.items()):
+            if len(word_list) > 1:
+                line = "/" + stem
+                for word in word_list:
+                    line = line + "\t" + word
+                line = line + "\t\n"
+                f.write(line)
 
 """
 Removes the surrounding <html> and <pre> tags and makes the document lowercase.
@@ -50,7 +69,7 @@ def clean_text(doc):
 """
 Tokenizes the words in a document then returns a dictionary from each word to its number of occurances in the doc
 """
-def index_doc(doc):
+def tokenize_doc(doc):
     tokens = word_tokenize(doc)
     doc_index = {}
     for token in tokens:
@@ -59,24 +78,3 @@ def index_doc(doc):
         else:
             doc_index[token] = 1
     return doc_index
-
-
-def read_index(filename):
-    index = {}
-    with open(filename, 'r') as index_file:
-        line = index_file.readline()
-        while line:
-            line = line.split('\t')
-            posting_list = line[2:]
-            posting_dict = {}
-            for posting in posting_list:
-                posting = posting.split(':')
-                posting_dict[posting[0]] = int(posting[1])
-            index[line[0]] = posting_dict
-
-            line = index_file.readline()
-    return index
-
-
-if __name__ == "__main__":
-    main()

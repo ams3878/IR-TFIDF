@@ -1,16 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .utils import *
-from .retrieval_algorithms import query
-from .query_expansion import  expand_term
+from .custom_lib.query_expansion import expand_term
+from .custom_lib.retrieval_algorithms import query
+from .custom_lib.utils import get_index, get_stems, get_lines_keywords
+from .custom_lib.indexer import *
+from .models import *
 import time
 
 # reverse index TSV
 #   window size: document
 #   values: word frequency
 #   format: term doc:freq
-INDEX_DOC_FREQ = get_index('mlp_index.tsv')
+INDEX_DOC_FREQ_DICT = get_index('mlp_index.tsv')
 
+# Stems
+STEM_DICT = get_stems('mlp_stems.tsv')
 
 def home(request):
     context = {}
@@ -32,9 +36,9 @@ def results(request):
 
     terms = term_string.split()
     # query expansion, and pre processing here stored to terms
-    terms = expand_term(terms, 'none')
+    terms = expand_term(terms, STEM_DICT)
     # ranked query results here stored to doc_list
-    doc_list = query(term_string, INDEX_DOC_FREQ, 'tfidf')
+    doc_list = query(terms, INDEX_DOC_FREQ_DICT, 'tfidf')
     t2 = time.time_ns()
     for i in doc_list:
         result_dict[Document.objects.filter(id=i[0])[0].title] = get_lines_keywords(terms, i[0])
@@ -72,7 +76,8 @@ def episodes(request):
 
 
 def main(request):
-    #create_new_chars()
-    #create_char_episode()
-    #create_episode_files("ponyportal\static\All_transcripts.txt", "ponyportal\static\episodes\\")
+    # create_new_chars()
+    # create_char_episode()
+    # create_episode_files("ponyportal\static\All_transcripts.txt", "ponyportal\static\episodes\\")
+    create_stems("mlp_index.tsv")
     return HttpResponse("running some function....")
