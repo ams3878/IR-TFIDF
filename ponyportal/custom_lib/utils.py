@@ -87,6 +87,42 @@ def create_episode_files(master, ep_loc):
     print("DONE-adding episodes")
 
 
+def get_pos_index(filename):
+    index = {}
+    with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
+        line = index_file.readline()
+        while line:
+            line = line.split('\t')
+            posting_list = line[1:-1]
+            posting_dict = {}
+            for posting in posting_list:
+                posting = posting.split(':')
+                try:
+                    posting_dict[int(posting[0])].append(int(posting[1]))
+                except KeyError:
+                    posting_dict[int(posting[0])] = [int(posting[1])]
+            index[line[0]] = posting_dict
+
+            line = index_file.readline()
+    return index
+
+
+def get_bigrams(filename):
+    index = {}
+    with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
+        line = index_file.readline()
+        while line:
+            line = line.split('\t')
+            posting_list = line[1:-1]
+            posting_dict = {}
+            for posting in posting_list:
+                posting = posting.split(':')
+                posting_dict[posting[0]] = posting[1]
+            index[line[0]] = posting_dict
+            line = index_file.readline()
+    return index
+
+
 def get_index(filename):
     index = {}
     with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
@@ -97,8 +133,8 @@ def get_index(filename):
             posting_dict = {'docs': {}}
             for posting in posting_list:
                 posting = posting.split(':')
-                posting_dict['count'] = str(line[1])
                 posting_dict['docs'][posting[0]] = int(posting[1])
+            posting_dict['count'] = str(line[1])
             index[line[0]] = posting_dict
 
             line = index_file.readline()
@@ -207,16 +243,26 @@ def get_lines_keywords_better(terms, episode):
 
 def get_lines_keywords(terms, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
+    stopword_list = get_stopwords()
+    terms = [x for x in terms if x not in stopword_list]
+
     matched_lines = []
     for line in f:
         temp_line = line.lower()
         for i in terms:
-            temp_line = temp_line.replace(i, "<b>" + i + "</b>")
-            print("FOUND MATCH")
+            space_i = " " + i + " "
+            temp_line = temp_line.replace(space_i, " <b>" + i + "</b> ")
         if line.lower() != temp_line:
             matched_lines.append(temp_line)
     f.close()
     return matched_lines[0:5]
+
+
+def get_stopwords():
+    f = open('ponyportal\static\ponyportal\stopwords.txt', 'r')
+    line = f.read()
+    f.close()
+    return line.split(',')
 
 
 def get_season(episode):

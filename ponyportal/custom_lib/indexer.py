@@ -7,6 +7,9 @@ from .porter import PorterStemmer
 
 INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_index.tsv"
 STEM_FILE_NAME = "ponyportal\static\ponyportal\mlp_stems.tsv"
+POSITIONAL_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_positions.tsv"
+BIGRAM_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_bigrams.tsv"
+
 
 def create_index_tsv():
     index = {}
@@ -36,6 +39,60 @@ def create_index_tsv():
         for key in sorted(index.keys()):
             line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
             output_file.write(line)
+
+
+def create_index_tsv_positions():
+    doc_index = {}
+    for filename in os.listdir('./ponyportal/static/episodes'):
+        formatted_filename = os.path.join('.\ponyportal\static\episodes', filename)
+
+        with open(formatted_filename, 'r') as f:
+            doc_text = f.read()
+            doc_text = clean_text(doc_text)
+            tokens = word_tokenize(doc_text)
+            for i in range(len(tokens)):
+                try:
+                    doc_index[tokens[i]].append((filename, i+1))
+                except KeyError:
+                    doc_index[tokens[i]] = [(filename, i+1)]
+
+    # Write index to a file
+    with open(POSITIONAL_INDEX_FILE_NAME, 'w') as output_file:
+        for word, pos_list in sorted(doc_index.items()):
+            line = word
+            for pos in pos_list:
+                line += "\t%s:%s" % (pos[0], pos[1])
+            line += "\t\n"
+            output_file.write(line)
+
+
+
+
+def make_bigrams(pos_index, freq_index, threshold):
+    with open(BIGRAM_INDEX_FILE_NAME, 'w') as output_file:
+        for word_1 in pos_index:
+            bigrams = {}
+            for word_2 in pos_index:
+                for doc, pos_list in pos_index[word_1].items():
+                    if doc in pos_index[word_2].keys():
+                        for pos in pos_list:
+                            if pos + 1 in pos_index[word_2][doc]:
+                                try:
+                                    bigrams[word_2] += 1
+                                except KeyError:
+                                    bigrams[word_2] = 1
+
+            line = word_1
+            for word_2, count in bigrams.items():
+                freq = 0
+                for w, w_count in freq_index[word_1]["docs"].items():
+                    freq += int(w_count)
+                ratio = count/freq
+                if ratio > threshold:
+                    line += "\t" + word_2 + ":" + str(ratio)
+            line += "\t\n"
+            if line != word_1 + "\t\n":
+                output_file.write(line)
 
 
 def create_stems(index_tsv):

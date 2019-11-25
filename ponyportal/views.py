@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .custom_lib.query_expansion import expand_term
 from .custom_lib.retrieval_algorithms import query
-from .custom_lib.utils import get_index, get_stems, get_lines_keywords
-from .custom_lib.indexer import *
+from .custom_lib.utils import get_index, get_stems, get_lines_keywords, get_pos_index, get_bigrams
+
 from .models import *
 import time
 
@@ -16,8 +16,27 @@ INDEX_DOC_FREQ_DICT = get_index('mlp_index.tsv')
 # Stems
 STEM_DICT = get_stems('mlp_stems.tsv')
 
+# positional index
+POSITIONAL_INDEX_DICT = get_pos_index('mlp_positions.tsv')
+
+# bigrams
+BIGRAMS_DICT = get_bigrams('mlp_bigrams.tsv')
+
+
 def home(request):
-    context = {}
+    try:
+        pre_query = request.GET['pre_query']
+    except KeyError:
+        pre_query = "None"
+    try:
+        suggestions = list(BIGRAMS_DICT[pre_query].keys())
+    except KeyError:
+        suggestions = "None"
+    # turn off auto-complete until it actually works
+    suggestions = "None"
+    context = {"suggestions": suggestions,
+               "pre_query": pre_query
+               }
     return render(request, 'home/home.html', context)
 
 
@@ -26,6 +45,18 @@ def index(request):
 
 
 def results(request):
+    season_filter = []
+    print(request.GET)
+
+    for i in request.GET:
+        if i.find("Season") != -1:
+            s = int(i[7:])
+            if s == 11:
+                season_filter += [11, 12, 13, 14]
+            else:
+                season_filter.append(s)
+    facets = [(e.name, e.id, "checked") if e.id in season_filter else (e.name, e.id, "")
+              for e in list(Season.objects.all())]
     t1 = time.time_ns()
     result_dict = {}
     term_string = request.GET['query']
@@ -34,14 +65,22 @@ def results(request):
     elif term_string == '#characters':
         return ponies(request)
 
-    terms = term_string.split()
+    terms = term_string
+    highlight_terms = term_string.split()
     # query expansion, and pre processing here stored to terms
     terms = expand_term(terms, STEM_DICT)
     # ranked query results here stored to doc_list
     doc_list = query(terms, INDEX_DOC_FREQ_DICT, 'tfidf')
+    doc_objects = []
+    for x in doc_list:
+        doc_objects.append(Document.objects.filter(id=int(x[0]))[0])
+    if len(season_filter) > 0:
+        season_objects = [e for e in Season.objects.all() if (e.name, e.id, "checked") in facets]
+        doc_objects = [e.episode for e in SeasonToDocument.objects.filter(season__in=[y for y in season_objects],
+                                                                          episode__in=[x for x in doc_objects])]
     t2 = time.time_ns()
-    for i in doc_list:
-        result_dict[Document.objects.filter(id=i[0])[0].title] = get_lines_keywords(terms, i[0])
+    for i in doc_objects[0:20]:
+        result_dict[i.title] = (i.id, get_lines_keywords(highlight_terms, i.id))
     t3 = time.time_ns()
     if len(result_dict) == 0:
         results_header = "Sorry, no results for " + term_string + " or there is a problem with the query"
@@ -51,6 +90,7 @@ def results(request):
                'terms_list': terms,
                'result_dict': result_dict,
                'term_string': term_string,
+               'facets': facets[0:-3],
                }
 
     print("Time to retrive docs:", (t2 - t1)/1000000, 'ms')
@@ -75,9 +115,16 @@ def episodes(request):
     return render(request, 'home/list.html', context)
 
 
+def info(request):
+    context = {
+               }
+    return render(request, 'home/info.html', context)
+
 def main(request):
     # create_new_chars()
     # create_char_episode()
     # create_episode_files("ponyportal\static\All_transcripts.txt", "ponyportal\static\episodes\\")
-    create_stems("mlp_index.tsv")
+    # create_stems("mlp_index.tsv")
+    # create_index_tsv_positions()
+    # make_bigrams(POSITIONAL_INDEX_DICT, INDEX_DOC_FREQ_DICT, .1)
     return HttpResponse("running some function....")

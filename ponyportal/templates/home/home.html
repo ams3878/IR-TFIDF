@@ -6,13 +6,38 @@
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
-<body>
+{%if pre_query != "None"%}
+<body onLoad="document.form1.query.value='{{pre_query}}';document.form1.query.datalistfocus='true';document.form1.query.focus();">
+{% endif %}
+<form id="form2" method="get" action=".">
+    <input id="form2_input" value="test" name="pre_query" style="display: none;">
+</form>
 <div id="title">
-<a href="https://fontmeme.com/fonts/my-little-pony-font/"><img src="https://fontmeme.com/permalink/191119/a3a8a8436acf9f3088d264d383938a34.png" alt="my-little-pony-font" border="0"></a></div>
+    <a href="https://fontmeme.com/fonts/my-little-pony-font/"><img
+            src="https://fontmeme.com/permalink/191119/a3a8a8436acf9f3088d264d383938a34.png"
+            alt="my-little-pony-font" border="0"></a>
+</div>
 <div id="cover">
-    <form method="get" action="./results">
+    <form name="form1" method="get" action="./results">
         <div class="tb">
-            <div class="td"><input name="query" type="text" placeholder="Search" required></div>
+            <div class="td">
+                {%if suggestions == "None"%}
+                <input name="query" type="text" placeholder="Search"
+                                   onchange="form2_input.value=this.value;form2.submit();" onkeypress="this.onchange();"
+                                   onpaste="this.onchange();" oninput="this.onchange();" required >
+                {% else %}
+                <input list="suggestions" name="query" id="query" type="text" autocomplete="off"
+                       onkeypress="form2_input.value=this.value;form2.submit();"
+                       onpaste="this.onkeypress();" oninput="this.onkeypress();" required >
+                <datalist id="suggestions" >
+                    <select id="sug_drop"  onMouseOver="this.size=this.length;">
+                        {% for i in suggestions %}
+                        <option value="{{i}}">
+                            {% endfor %}
+                    </select>
+                </datalist>
+                {% endif %}
+            </div>
             <div class="td" id="s-cover">
                 <button type="submit">
                     <div id="s-circle"></div>
@@ -21,6 +46,9 @@
             </div>
         </div>
     </form>
+</div>
+<div id="nav-bar-home">
+    <a href="./info">Site Info</a>
 </div>
 </body>
 </html>
