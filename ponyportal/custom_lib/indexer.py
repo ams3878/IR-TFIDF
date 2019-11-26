@@ -37,6 +37,8 @@ def create_index_tsv():
             line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
             output_file.write(line)
 
+
+# Creates a tsv containing the index built using non-overlapping windows of size 10
 def create_window_index_tsv():
     index = {}
 
