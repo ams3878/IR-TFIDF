@@ -14,11 +14,11 @@ def tfidf(terms, index):
     doc_sums = {}
     doc_scores = []
     prev_idf_sqrs = []
-    print('tfidf:', terms)
+    idf_list = []
     for term in terms:
         try:
-            #idf = (num_docs*num_docs*num_docs) / (int(index[term]['count'])/2)
             idf = math.log(244 / int(index[term]['count']))
+            idf_list.append(idf)
             for doc, frequency in index[term]['docs'].items():
                 tf = math.log(frequency+1)
                 tf_idf = tf*idf
@@ -32,10 +32,13 @@ def tfidf(terms, index):
             prev_idf_sqrs.append(idf*idf)
         except KeyError:
             continue
+        update_old = [x for x in doc_sums if x not in index[term]['docs']]
+        for x in update_old:
+            doc_sums[x] = (doc_sums[x][0], doc_sums[x][1] + sqrs)
     for i, sums in doc_sums.items():
         doc_scores.append((i, sums[0]/math.pow(sums[1], .5)))
     doc_scores = sorted(doc_scores, key=lambda tup: tup[1], reverse=True)
-    return doc_scores
+    return doc_scores, idf_list
 
 def query_bm25(terms, index, doc_index):
     term_counts ={}

@@ -13,8 +13,8 @@ BIGRAM_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_bigrams.tsv"
 
 def create_index_tsv():
     index = {}
-    for filename in os.listdir('./static/episodes'):
-        formatted_filename = os.path.join('./static/episodes', filename)
+    for filename in os.listdir('./ponyportal/static/episodes'):
+        formatted_filename = os.path.join('./ponyportal/static/episodes', filename)
         doc_num = re.search('(\d+)', filename)
         if type(doc_num) is not None:
             doc_num = str(doc_num.group(1))
@@ -22,9 +22,6 @@ def create_index_tsv():
         with open(formatted_filename, 'r') as html_file:
             doc_text = html_file.read()
             doc_text = clean_text(doc_text)
-
-            words = doc_text.split(' ')
-
             doc_index = tokenize_doc(doc_text)
 
             for token in doc_index:
@@ -119,7 +116,7 @@ Removes the surrounding <html> and <pre> tags and makes the document lowercase.
 """
 def clean_text(doc):
     doc = doc.lower()
-    doc = doc.translate(str.maketrans(string.punctuation, ' ' * len(string.punctuation)))
+    doc = doc.translate(str.maketrans('', '', string.punctuation))
     return doc
 
 
