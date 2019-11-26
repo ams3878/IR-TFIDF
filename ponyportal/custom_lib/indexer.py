@@ -9,7 +9,8 @@ INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_index.tsv"
 STEM_FILE_NAME = "ponyportal\static\ponyportal\mlp_stems.tsv"
 POSITIONAL_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_positions.tsv"
 BIGRAM_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_bigrams.tsv"
-
+WINDOW_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mmlp_window_index.tsv"
+WINDOW_SIZE = 10
 
 def create_index_tsv():
     index = {}
@@ -37,6 +38,43 @@ def create_index_tsv():
             line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
             output_file.write(line)
 
+# Creates a tsv containing the index built using non-overlapping windows of size 10
+def create_window_index_tsv():
+    index = {}
+
+    for filename in os.listdir('./ponyportal/static/episodes'):
+        formatted_filename = os.path.join('.\ponyportal\static\episodes', filename)
+        doc_num = re.search('(\d+)', filename)
+        if type(doc_num) is not None:
+            doc_num = str(doc_num.group(1))
+
+        # Open and index the current file
+        with open(formatted_filename, 'r') as html_file:
+            doc_text = html_file.read()
+            doc_text = clean_text(doc_text)
+
+            words = doc_text.split(' ')
+            window_index = 0
+            for word_index in range(0, len(words), WINDOW_SIZE):
+                max_ind = word_index + WINDOW_SIZE
+                if max_ind >= len(words):
+                    max_ind = len(words)
+                doc_index = tokenize_doc(' '.join(words[word_index:max_ind]))
+
+                # merge document index with the corpus index
+                for token in doc_index:
+                    index_str = doc_num + ':' + str(window_index)
+                    if token not in index:
+                        index[token] = index_str
+                    else:
+                        index[token] += ('\t' + index_str)
+                window_index += 1
+
+    # Write index to a file
+    with open(WINDOW_INDEX_FILE_NAME, 'w') as output_file:
+        for key in sorted(index.keys()):
+            line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
+            output_file.write(line)
 
 def create_index_tsv_positions():
     doc_index = {}
