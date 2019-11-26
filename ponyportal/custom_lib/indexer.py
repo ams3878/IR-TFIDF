@@ -42,8 +42,8 @@ def create_index_tsv():
 def create_window_index_tsv():
     index = {}
 
-    for filename in os.listdir('./static/episodes'):
-        formatted_filename = os.path.join('./static/episodes', filename)
+    for filename in os.listdir('./ponyportal/static/episodes'):
+        formatted_filename = os.path.join('.\ponyportal\static\episodes', filename)
         doc_num = re.search('(\d+)', filename)
         if type(doc_num) is not None:
             doc_num = str(doc_num.group(1))
