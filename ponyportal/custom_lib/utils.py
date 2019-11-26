@@ -123,7 +123,7 @@ def get_bigrams(filename):
 
 def get_index(filename):
     index = {}
-    with open( DOC_INDEX_FILENAME, 'r') as index_file:
+    with open( 'ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
         line = index_file.readline()
         while line:
             line = line.split('\t')
@@ -313,15 +313,16 @@ def clean_terms(terms, index, doc_index, window_index, dice_scores):
         if term != terms[0]:
             adj_term = fixed_terms[-1]
         most_similar = get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores)
-        if most_similar not in index and len(most_similar) > 1:
+        print(most_similar)
+        if most_similar not in index and len(most_similar) > 2:
             for split in range(1, len(most_similar)):
                 half1 = most_similar[:split]
-                if half1 in index:
-                    half2 = most_similar[split:]
-                    if half2 in index:
-                        fixed_terms.append(half1)
-                        fixed_terms.append(half2)
-                        break
+                half2 = most_similar[split:]
+                if half1 in index and len(half1) > 2:
+                    fixed_terms.append(half1)
+                if half2 in index and len(half2) > 2:
+                    fixed_terms.append(half2)
+
         else:
             fixed_terms.append(most_similar)
     return fixed_terms

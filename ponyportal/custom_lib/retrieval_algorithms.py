@@ -14,6 +14,7 @@ def tfidf(terms, index):
     doc_sums = {}
     doc_scores = []
     prev_idf_sqrs = []
+    print('tfidf:', terms)
     for term in terms:
         try:
             #idf = (num_docs*num_docs*num_docs) / (int(index[term]['count'])/2)
