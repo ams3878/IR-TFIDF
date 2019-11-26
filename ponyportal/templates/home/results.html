@@ -62,6 +62,11 @@
             </ul>
         </div>
         <div class="td" id="results-frame-2">
+            {% for r in related %}
+            <div>
+                <a href="./results?query={{r.0}}">{{ r.0 }}</a>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </form>

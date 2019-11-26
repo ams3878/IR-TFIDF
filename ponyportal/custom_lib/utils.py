@@ -1,4 +1,5 @@
 import re
+import string
 from math import ceil
 from ..models import *
 
@@ -123,7 +124,7 @@ def get_bigrams(filename):
 
 def get_index(filename):
     index = {}
-    with open( DOC_INDEX_FILENAME, 'r') as index_file:
+    with open( 'ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
         line = index_file.readline()
         while line:
             line = line.split('\t')
@@ -256,32 +257,45 @@ def create_char_episode():
     print("Done adding chars to docs")
 
 
-def get_lines_keywords_better(terms, episode):
-    f = open('ponyportal\static\episodes\\' + str(episode), 'r')
-    lines = f.read()
-    print(lines)
-    for i in terms:
-        lines = lines.replace(i, "<b>"+i+"</b>")
-    f.close()
-    return lines
-
-
-def get_lines_keywords(terms, episode):
+def get_lines_keywords(terms, idf_list, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
     stopword_list = get_stopwords()
-    terms = [x for x in terms if x not in stopword_list]
-
+    terms_dict = {}
+    stop_dict = {}
+    for x in terms:
+        if x not in stopword_list:
+            terms_dict[x] = "<b>" + x + "</b>"
+        else:
+            stop_dict[x] = "<b>" + x + "</b>"
     matched_lines = []
-    for line in f:
-        temp_line = line.lower()
-        for i in terms:
-            space_i = " " + i + " "
-            temp_line = temp_line.replace(space_i, " <b>" + i + "</b> ")
-        if line.lower() != temp_line:
-            matched_lines.append(temp_line)
-    f.close()
-    return matched_lines[0:5]
+    matched_lines_stop = []
+    term_regex = re.compile('(.*)([\W\s]*)(' + '|'.join(terms_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
+    term_regex_stop = re.compile('(.*)([\W\s])(' + '|'.join(stop_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
 
+    for line in f:
+        line_list = line
+        line_list = line_list.lower().translate(str.maketrans('', '', string.punctuation)).split()
+        score = 0
+        for t in range(len(terms)):
+            if terms[t] in line_list:
+                score += idf_list[t] / len(line_list)
+        temp_line = re.sub(term_regex, lambda y: y.group(1) + y.group(2) +
+                                                 terms_dict[y.group(3).lower()]
+                                                 + y.group(4) + y.group(5), line)
+        if line != temp_line:
+            matched_lines.append((temp_line, score))
+        if len(stop_dict) != 0:
+            temp_line_stop = re.sub(term_regex_stop, lambda y: y.group(1) + y.group(2) +
+                                                               stop_dict[y.group(3).lower()]
+                                                               + y.group(4) + y.group(5), line)
+            if line != temp_line_stop:
+                matched_lines_stop.append((temp_line_stop, score))
+
+    f.close()
+
+    if len(matched_lines) < 5:
+        matched_lines += matched_lines_stop
+    return [y[0] for y in sorted(matched_lines[0:5],  key=lambda z: z[1], reverse=True)][0:5]
 
 def get_stopwords():
     f = open('ponyportal\static\ponyportal\stopwords.txt', 'r')
@@ -302,6 +316,7 @@ def get_season(episode):
     else:
         return episode - 239 + 10
 
+
 def clean_terms(terms, index, doc_index, window_index, dice_scores):
     fixed_terms = []
 
@@ -312,19 +327,24 @@ def clean_terms(terms, index, doc_index, window_index, dice_scores):
     for term in terms:
         if term != terms[0]:
             adj_term = fixed_terms[-1]
-        most_similar = get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores)
-        if most_similar not in index and len(most_similar) > 1:
-            for split in range(1, len(most_similar)):
-                half1 = most_similar[:split]
-                if half1 in index:
+        if term not in index:
+            most_similar = get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores)
+            print(most_similar)
+            if most_similar not in index and len(most_similar) > 2:
+                for split in range(1, len(most_similar)):
+                    half1 = most_similar[:split]
                     half2 = most_similar[split:]
-                    if half2 in index:
+                    if half1 in index and len(half1) > 2:
                         fixed_terms.append(half1)
+                    if half2 in index and len(half2) > 2:
                         fixed_terms.append(half2)
-                        break
+            else:
+                fixed_terms.append(most_similar)
         else:
-            fixed_terms.append(most_similar)
+            fixed_terms.append(term)
+    print(fixed_terms)
     return fixed_terms
+
 
 def get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores):
     most_similar = term
@@ -356,6 +376,7 @@ def get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores
 
     return most_similar
 
+
 def find_associations(word, terms, window_index, dice_scores):
     associated_words = []
     min_coeff = 0
@@ -385,6 +406,7 @@ def find_associations(word, terms, window_index, dice_scores):
                 min_coeff = associated_words[-1][1]
     return associated_words
 
+
 def get_dice_coeff(term1, term2):
     term_intersects = 0
     for doc in term1:
@@ -392,6 +414,7 @@ def get_dice_coeff(term1, term2):
             intersect = [value for value in term1[doc] if value in term2[doc]]
             term_intersects += len(intersect)
     return 2*term_intersects/(term1['count'] + term2['count'])
+
 
 def get_levenshtein_distance(term1, term2):
     matrix = [[0 for x in range(len(term2) + 1)] for x in range(len(term1) + 1)]
@@ -418,6 +441,7 @@ def get_levenshtein_distance(term1, term2):
 
     return matrix[len(term1)][len(term2)]
 
+
 def get_additional_query_terms(terms, window_index, dice_scores):
     associations = {}
 
@@ -432,6 +456,7 @@ def get_additional_query_terms(terms, window_index, dice_scores):
         similar_terms.append((term, associations[term]))
     similar_terms = sorted(similar_terms, key=lambda tup: tup[1], reverse=True)
     return similar_terms
+
 
 # NLTK list of stop words
 def get_stop_words():

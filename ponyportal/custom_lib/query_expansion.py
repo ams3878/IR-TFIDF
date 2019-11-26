@@ -1,11 +1,10 @@
 from .porter import PorterStemmer
 import string
 
-def expand_term(term_string, stem_dict):
-    term_string = term_string.translate(str.maketrans(string.punctuation, ' ' * len(string.punctuation)))
+def expand_term(terms, stem_dict):
     new_term_list = []
     ps = PorterStemmer()
-    for i in term_string.split():
+    for i in terms:
         term_stem = "/" + ps.stem(i)
         if term_stem in stem_dict.keys():
             new_term_list += stem_dict[term_stem]
