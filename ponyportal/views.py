@@ -176,7 +176,7 @@ def results(request):
         season_objects = [e for e in Season.objects.all() if (e.name, e.id, "checked") in facets]
         doc_objects = [(e.episode, x[1]) for e in SeasonToDocument.objects.filter(
             season__in=[y for y in season_objects],
-            episode__in=[x for x in doc_objects])]
+            episode__in=[x[0] for x in doc_objects])]
 
     t2 = time.time_ns()
     # do document summarization on the top 10 results, and highlight the keyword matches
