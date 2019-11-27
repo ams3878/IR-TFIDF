@@ -362,14 +362,14 @@ def get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores
                 else:
                     similarity = 1 - dist / len(word)
                 usage = int(index[word]['count']) / doc_count
-                if adj_term in index:
+                if word in window_index and adj_term in window_index:
                     dice = get_dice_coeff(window_index[adj_term], window_index[word])
                     if adj_term not in dice_scores:
                         dice_scores[adj_term] = {}
                     dice_scores[adj_term][word] = dice
                 else:
                     dice = 0
-                score = similarity * usage * dice
+                score = similarity + usage + dice
                 if score > most_similar_score:
                     most_similar_score = score
                     most_similar = word
