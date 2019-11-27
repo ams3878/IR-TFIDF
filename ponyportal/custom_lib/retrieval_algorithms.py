@@ -31,6 +31,7 @@ def tfidf(terms, index):
                     doc_sums[doc] = (tf_idf, sqrs)
             prev_idf_sqrs.append(idf*idf)
         except KeyError:
+            idf_list.append(0)
             continue
         update_old = [x for x in doc_sums if x not in index[term]['docs']]
         for x in update_old:

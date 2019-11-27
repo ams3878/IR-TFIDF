@@ -41,7 +41,7 @@ def create_episode_files(master, ep_loc):
                             line_count += 1
                             script_tag = script_tag + clean_line[1]
                         if clean_line[0] != '\n':
-                            script = script + clean_line[0]
+                            script = script + '\t' + clean_line[0]
                     line = f.readline()
                     line_list = line.split('>')
                 meta = meta + ', lines: ' + str(line_count) + "]\n"
@@ -269,7 +269,7 @@ def get_lines_keywords(terms, idf_list, episode):
             stop_dict[x] = "<b>" + x + "</b>"
     matched_lines = []
     matched_lines_stop = []
-    term_regex = re.compile('(.*)([\W\s]*)(' + '|'.join(terms_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
+    term_regex = re.compile('(.*)([\W\s])(' + '|'.join(terms_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
     term_regex_stop = re.compile('(.*)([\W\s])(' + '|'.join(stop_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
 
     for line in f:

@@ -9,7 +9,7 @@ INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_index.tsv"
 STEM_FILE_NAME = "ponyportal\static\ponyportal\mlp_stems.tsv"
 POSITIONAL_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_positions.tsv"
 BIGRAM_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_bigrams.tsv"
-WINDOW_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mmlp_window_index.tsv"
+WINDOW_INDEX_FILE_NAME = "./ponyportal\static\ponyportal\mlp_window_index.tsv"
 WINDOW_SIZE = 10
 
 def create_index_tsv():
@@ -50,17 +50,11 @@ def create_window_index_tsv():
 
         # Open and index the current file
         with open(formatted_filename, 'r') as html_file:
-            doc_text = html_file.read()
-            doc_text = clean_text(doc_text)
-
-            words = doc_text.split(' ')
+            line = html_file.readline()
             window_index = 0
-            for word_index in range(0, len(words), WINDOW_SIZE):
-                max_ind = word_index + WINDOW_SIZE
-                if max_ind >= len(words):
-                    max_ind = len(words)
-                doc_index = tokenize_doc(' '.join(words[word_index:max_ind]))
-
+            while line:
+                doc_text = clean_text(line)
+                doc_index = tokenize_doc(doc_text)
                 # merge document index with the corpus index
                 for token in doc_index:
                     index_str = doc_num + ':' + str(window_index)
@@ -69,6 +63,7 @@ def create_window_index_tsv():
                     else:
                         index[token] += ('\t' + index_str)
                 window_index += 1
+                line = html_file.readline()
 
     # Write index to a file
     with open(WINDOW_INDEX_FILE_NAME, 'w') as output_file:

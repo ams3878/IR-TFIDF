@@ -5,24 +5,57 @@ from .custom_lib.retrieval_algorithms import query
 from .custom_lib.utils import get_index, get_stems, get_lines_keywords,\
     get_pos_index, get_bigrams, get_window_index, get_docs_index, clean_terms, get_additional_query_terms
 from .models import *
+from .custom_lib.indexer import create_window_index_tsv, create_index_tsv, create_index_tsv_positions,\
+    make_bigrams, create_stems
 import time
 
 # reverse index TSV
 #   window size: document
 #   values: word frequency
 #   format: term doc:freq
-INDEX_DOC_FREQ_DICT = get_index('mlp_index.tsv')
-INDEX_WINDOW_FREQ_DICT = get_window_index()
-DOC_DICT = get_docs_index()
+try:
+    INDEX_DOC_FREQ_DICT = get_index('mlp_index.tsv')
+except FileNotFoundError:
+    print('mpl_index.tsv not found creating...')
+    create_index_tsv()
+    INDEX_DOC_FREQ_DICT = get_index('mlp_index.tsv')
+
+try:
+    INDEX_WINDOW_FREQ_DICT = get_window_index()
+except FileNotFoundError:
+    print('mpl_window_index.tsv not found creating...')
+    create_window_index_tsv()
+    INDEX_WINDOW_FREQ_DICT = get_window_index()
+
+try:
+    DOC_DICT = get_docs_index()
+except FileNotFoundError:
+    # TODO add function for creating doc_names.tsv
+    DOC_DICT = get_docs_index()
 
 # Stems
-STEM_DICT = get_stems('mlp_stems.tsv')
+try:
+    STEM_DICT = get_stems('mlp_stems.tsv')
+except FileNotFoundError:
+    print('mlp_stems.tsv not found creating...')
+    create_stems("mlp_index.tsv")
+    STEM_DICT = get_stems('mlp_stems.tsv')
 
 # positional index
-POSITIONAL_INDEX_DICT = get_pos_index('mlp_positions.tsv')
+try:
+    POSITIONAL_INDEX_DICT = get_pos_index('mlp_positions.tsv')
+except FileNotFoundError:
+    print('mlp_positions.tsv not found creating...')
+    create_index_tsv_positions()
+    POSITIONAL_INDEX_DICT = get_pos_index('mlp_positions.tsv')
 
 # bigrams
-BIGRAMS_DICT = get_bigrams('mlp_bigrams.tsv')
+try:
+    BIGRAMS_DICT = get_bigrams('mlp_bigrams.tsv')
+except FileNotFoundError:
+    print('mlp_bigrams.tsv not found creating...')
+    make_bigrams(POSITIONAL_INDEX_DICT, INDEX_DOC_FREQ_DICT, .1)
+    BIGRAMS_DICT = get_bigrams('mlp_bigrams.tsv')
 
 
 def home(request):
@@ -61,10 +94,13 @@ def results(request):
     t1 = time.time_ns()
     result_dict = {}
     term_string = request.GET['query'].lower()
-    if term_string == '#episodes':
-        return episodes(request)
-    elif term_string == '#characters':
-        return ponies(request)
+    if term_string[0] == '#':
+        if term_string[1:8] == '#episodes':
+            return episodes(request)
+        elif term_string[1:9] == '#characters':
+            return ponies(request)
+        elif term_string[1:8] == 'episode':
+            return render(request, 'episodes_html/' + term_string[8:] + '.html')
 
     terms = term_string.split()
     # Only highlight the original query terms, not ay added for expansion
@@ -73,18 +109,24 @@ def results(request):
     terms = clean_terms(terms, INDEX_DOC_FREQ_DICT, DOC_DICT, INDEX_WINDOW_FREQ_DICT, dice_scores)
 
     # This gets the terms to add to the end of the query for the 'searches related to ...'
-    related = get_additional_query_terms(terms, INDEX_WINDOW_FREQ_DICT, dice_scores)
+    related = get_additional_query_terms(terms, INDEX_WINDOW_FREQ_DICT, dice_scores)[0:5]
     # query expansion, and pre processing here stored to terms
     terms = expand_term(terms, STEM_DICT)
     # ranked query results here stored to doc_list
     # doc_list = query(terms, INDEX_DOC_FREQ_DICT, DOC_DICT, 'tfidf')
-    print(terms)
     doc_list, idf_list = query(terms, INDEX_DOC_FREQ_DICT, DOC_DICT, 'tfidf')
-    print(doc_list)
     doc_list_bm = query(terms, INDEX_DOC_FREQ_DICT, DOC_DICT, 'bm')
     print("rank\ttfidf\tbm25\n", "--------------------------------\n")
     for i in range(10):
-        print(i, "\t", doc_list[i], doc_list_bm[i])
+        if len(doc_list) > i:
+            idfdoc = doc_list[i]
+        else:
+            idfdoc = ""
+        if len(doc_list_bm) > i:
+            bmdoc = doc_list_bm[i]
+        else:
+            bmdoc = ""
+        print(i, "\t", idfdoc, bmdoc)
     doc_list_final = doc_list[:10]
     for i in doc_list_bm[:10]:
         if i not in doc_list_final:
@@ -144,11 +186,12 @@ def info(request):
     return render(request, 'home/info.html', context)
 
 def main(request):
-    #create_new_chars()
+    # create_new_chars()
     # create_char_episode()
     # create_episode_files("ponyportal\static\All_transcripts.txt", "ponyportal\static\episodes\\")
     # create_stems("mlp_index.tsv")
     # create_index_tsv()
     # create_index_tsv_positions()
     # make_bigrams(POSITIONAL_INDEX_DICT, INDEX_DOC_FREQ_DICT, .1)
+    # create_window_index_tsv()
     return HttpResponse("running some function....")

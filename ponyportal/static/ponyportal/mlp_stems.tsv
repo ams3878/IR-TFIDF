@@ -1,7 +1,8 @@
-/50	50	50s	
+/aa	aa	aas	
 /aah	aah	aahing	
 /ab	ab	abs	
 /abandon	abandon	abandoned	abandoning	
+/abc	abc	abcs	
 /abil	abilities	ability	
 /abomin	abomination	abominations	
 /absolut	absolute	absolutely	
@@ -28,14 +29,13 @@
 /acoust	acoustic	acoustics	
 /acquaint	acquaintance	acquaintances	
 /acr	acre	acres	
-/acrobat	acrobat	acrobatic	acrobatics	
+/acrobat	acrobatic	acrobatics	acrobats	
 /act	act	acted	acting	acts	
 /action	action	actions	
 /activ	activate	activated	activates	activating	active	activities	activity	
 /actor	actor	actors	
 /actress	actress	actresses	
 /actual	actual	actually	
-/acuda	acuda	acudas	
 /ad	added	adding	
 /adapt	adapt	adapting	
 /add	add	adds	
@@ -47,7 +47,7 @@
 /adjust	adjust	adjusting	adjustment	adjustments	
 /admir	admirable	admiral	admiration	admire	admired	admirer	admirers	admiring	
 /admit	admit	admitted	admitting	
-/adopt	adopt	adopting	adoption	
+/adopt	adopting	adoption	
 /ador	adorable	adorably	adoration	adore	adored	adores	adoring	
 /advanc	advance	advanced	advancing	
 /advantag	advantage	advantages	
@@ -59,19 +59,21 @@
 /affair	affair	affairs	
 /affect	affect	affected	affecting	affects	
 /affirm	affirmations	affirmative	affirmatives	affirming	
+/afternoon	afternoon	afternoons	
 /afterward	afterward	afterwards	
 /age	age	aged	ages	aging	
 /aggress	aggression	aggressive	
-/agil	agile	agility	
+/agil	agile	agility	agilitys	
 /agre	agree	agreed	agreeing	agrees	
 /agreement	agreement	agreements	
 /ah	ah	ahhing	
 /ahh	ahh	ahhs	
+/ahuizotl	ahuizotl	ahuizotls	
 /aid	aid	aids	
-/ail	ail	ailing	ails	
+/ail	ailing	ails	
 /ailment	ailment	ailments	
 /aim	aim	aiming	
-/air	air	airing	
+/air	air	airing	airs	
 /airship	airship	airships	
 /airsick	airsick	airsickness	
 /alert	alert	alerted	alerts	
@@ -81,11 +83,11 @@
 /alley	alley	alleys	
 /alli	allies	ally	
 /allig	alligator	alligators	
+/allnight	allnight	allnighter	
 /allow	allow	allowed	allowing	allows	
 /alter	alter	alterations	altered	
 /altern	alternate	alternating	alternative	
 /amaz	amaze	amazed	amazement	amazing	
-/amend	amending	amends	
 /amethyst	amethyst	amethysts	
 /amigo	amigo	amigos	
 /amount	amount	amounts	
@@ -94,15 +96,23 @@
 /amus	amused	amusement	amusing	
 /anecdot	anecdote	anecdotes	
 /angel	angel	angelic	angels	
+/anger	anger	angers	
 /angl	angle	angles	angling	
-/anim	animal	animals	animate	animated	
+/anim	animal	animals	animate	
 /ankl	ankle	ankles	
 /announc	announce	announced	announcement	announcements	announcer	announcers	announces	announcing	
 /annoy	annoyed	annoying	
+/anoth	another	anothers	
 /answer	answer	answered	answering	answers	
 /anticip	anticipated	anticipation	
 /antiqu	antique	antiquing	antiquities	
 /antler	antler	antlers	
+/anybodi	anybody	anybodys	
+/anycreatur	anycreature	anycreatures	
+/anygriff	anygriff	anygriffs	
+/anygriffon	anygriffon	anygriffons	
+/anyponi	anypony	anyponys	
+/anyth	anything	anythings	
 /anyway	anyway	anyways	
 /apart	apart	apartment	
 /apolog	apologies	apologize	apologized	apologizing	apology	
@@ -114,7 +124,9 @@
 /applaud	applaud	applauding	applauds	
 /applebuck	applebuck	applebucking	
 /applejack	applejack	applejacks	
+/applejuic	applejuice	applejuices	
 /appleloosan	appleloosan	appleloosans	
+/applesauc	applesauce	applesauces	
 /appli	applied	applies	apply	
 /applic	applicable	applicants	application	applications	
 /appliquã©	appliquã©	appliquã©s	
@@ -128,17 +140,18 @@
 /archer	archer	archers	
 /architectur	architectural	architecture	
 /area	area	areas	
-/argu	argue	argued	arguing	
+/argu	argue	argued	arguing	arguings	
 /argument	argument	arguments	
 /ari	ari	aris	
 /aria	aria	arias	
 /arm	arm	arms	
 /armi	armies	army	
+/armor	armor	armors	
 /arrang	arrange	arranged	arrangement	arrangements	arranging	
 /arrest	arrest	arrests	
 /arriv	arrival	arrive	arrived	arrives	arriving	
 /arrow	arrow	arrows	
-/art	art	arte	arts	
+/art	art	arts	
 /articl	article	articles	
 /artifact	artifact	artifacts	
 /artist	artist	artiste	artistes	artistic	artists	
@@ -156,7 +169,7 @@
 /assur	assurance	assure	assured	
 /astonish	astonished	astonishing	
 /astound	astound	astounding	
-/astronom	astronomer	astronomical	astronomically	
+/astronom	astronomers	astronomical	astronomically	
 /athlet	athlete	athletes	athletic	athletics	
 /attach	attach	attached	
 /attack	attack	attacked	attacking	attacks	
@@ -174,15 +187,16 @@
 /autograph	autograph	autographs	
 /avalanch	avalanche	avalanches	
 /avoid	avoid	avoided	avoiding	
-/aw	aw	awful	awfully	
+/aw	aw	awful	awfully	aws	
 /await	await	awaiting	awaits	
 /awar	aware	awareness	
 /award	award	awards	
 /awe	awe	awed	awing	
 /awesom	awesome	awesomely	awesomeness	awesomer	
+/aww	aww	awws	
 /awww	awww	awwws	
 /babbl	babbles	babbling	
-/babi	babies	baby	babying	
+/babi	babies	baby	babying	babys	
 /babysit	babysit	babysitting	
 /back	back	backed	backing	backs	
 /backfir	backfire	backfired	backfires	backfiring	
@@ -200,7 +214,6 @@
 /ball	ball	balling	balls	
 /balloon	balloon	balloons	
 /ballot	ballot	ballots	
-/bamboozl	bamboozle	bamboozlers	
 /ban	ban	banned	bans	
 /banana	banana	bananas	
 /band	band	banded	bands	
@@ -214,6 +227,8 @@
 /barg	barge	barging	
 /bargain	bargain	bargains	
 /bark	bark	barking	barks	
+/barley	barley	barleys	
+/barn	barn	barns	
 /barrel	barrel	barreling	barrels	
 /base	base	based	bases	
 /basic	basic	basically	basics	
@@ -232,7 +247,7 @@
 /beam	beam	beams	
 /bean	bean	beans	
 /bear	bear	bears	
-/beard	beard	bearded	
+/beard	beard	bearded	beardeds	
 /beast	beast	beasts	
 /beat	beat	beating	beats	
 /beauti	beauties	beautiful	beautifully	beauty	
@@ -248,11 +263,11 @@
 /befriend	befriend	befriending	
 /beg	beg	begged	begging	
 /begin	begin	beginning	begins	
-/beginn	beginner	beginners	
 /behav	behave	behaved	behaves	behaving	
 /belch	belch	belches	belching	
 /believ	believable	believe	believed	believer	believes	believing	
 /bell	bell	belle	belles	bells	
+/belli	belly	bellys	
 /bellow	bellowing	bellows	
 /belong	belong	belonged	belongs	
 /belt	belt	belted	belts	
@@ -266,40 +281,40 @@
 /betray	betray	betrayal	betrayed	
 /betti	betty	bettys	
 /beverag	beverage	beverages	
-/bff	bff	bffs	
 /bicker	bicker	bickering	
-/bid	bid	bidding	
-/bide	bidee	biding	
+/bid	bid	bidding	biddings	
 /big	big	bigness	
 /bike	bike	bikes	
-/bill	bill	billed	
+/billboard	billboard	billboards	
 /biolog	biological	biology	
 /bird	bird	birds	
-/birdi	birdie	birdies	birdy	
+/birdi	birdie	birdies	
 /birthday	birthday	birthdays	
+/birthiversari	birthiversary	birthiversarys	
 /biscuit	biscuit	biscuits	
 /bit	bit	bits	
 /bite	bite	bites	biting	
+/biteacuda	biteacuda	biteacudas	
 /bitter	bitter	bitterness	
 /black	black	blackness	
 /blackberri	blackberries	blackberry	
 /blame	blame	blamed	blames	blaming	
 /blanket	blanket	blankets	
-/blanki	blankie	blanky	
 /blare	blare	blares	blaring	
 /blast	blast	blasted	blasts	
 /blaze	blaze	blazes	blazing	
-/ble	ble	bles	
 /bleat	bleat	bleating	bleats	
 /blend	blend	blended	blending	blends	
 /bless	bless	blessed	blessing	blessings	
-/blight	blight	blighted	
+/blight	blight	blighted	blights	
 /blind	blind	blinded	blinds	
 /blindfold	blindfold	blindfolded	blindfolds	
 /blink	blink	blinking	blinks	
 /bliss	bliss	blissed	
 /block	block	blocked	blocking	blocks	
+/bloofi	bloofy	bloofys	
 /bloom	bloom	blooming	blooms	
+/bloomberg	bloomberg	bloombergs	
 /blossom	blossom	blossomed	
 /blow	blow	blowing	blows	
 /blue	blue	blues	
@@ -307,23 +322,23 @@
 /blueprint	blueprint	blueprints	
 /blunt	blunt	bluntness	
 /blush	blush	blushed	
-/bo	bo	boing	
 /board	board	boarded	boards	
-/boast	boast	boasting	
 /boat	boat	boats	
 /bob	bob	bobbing	
 /bobbin	bobbin	bobbins	
-/bodi	bodies	body	
+/bodi	bodies	body	bodys	
 /boil	boil	boiling	boils	
 /bolt	bolt	bolts	
 /bomb	bomb	bombs	
 /bond	bond	bonding	bonds	
-/bone	bone	boned	bones	
+/bone	bone	bones	
 /bongo	bongo	bongos	
 /bonk	bonk	bonking	bonks	
 /bonnet	bonnet	bonnets	
 /boo	boo	booing	
+/booboo	booboo	booboos	
 /book	book	booked	books	
+/bookstor	bookstore	bookstores	
 /boom	boom	booming	
 /boost	boost	boosts	
 /boot	boot	booted	boots	
@@ -332,7 +347,7 @@
 /borrow	borrow	borrowed	borrower	borrowing	
 /bother	bother	bothered	bothering	bothers	
 /bottl	bottle	bottled	bottles	
-/bottom	bottom	bottomed	bottoms	
+/bottom	bottom	bottoms	
 /boulder	boulder	boulders	
 /bounc	bounce	bounces	bouncing	
 /bound	bound	bounds	
@@ -343,8 +358,10 @@
 /bowl	bowl	bowling	
 /box	box	boxes	
 /boy	boy	boys	
+/boyfriend	boyfriend	boyfriends	
 /brace	brace	braces	
 /bracelet	bracelet	bracelets	
+/braeburn	braeburn	braeburns	
 /brag	brag	bragging	
 /braid	braid	braiding	braids	
 /brain	brain	brains	
@@ -357,11 +374,11 @@
 /breach	breached	breaches	
 /break	break	breaking	breaks	
 /breakabl	breakable	breakables	
-/breaker	breaker	breakers	
 /breakfast	breakfast	breakfasts	
 /breakout	breakout	breakouts	
 /breath	breath	breathe	breathed	breathes	breathing	breaths	
 /breed	breed	breeding	breeds	
+/breev	breev	breevs	
 /breezi	breezie	breezies	breezy	
 /brew	brew	brewing	brews	
 /bride	bride	brides	
@@ -372,15 +389,13 @@
 /bring	bring	bringing	brings	
 /bro	bro	bros	
 /brooch	brooch	brooches	
-/broom	broom	brooms	
 /brother	brother	brothers	
 /brush	brush	brushes	brushing	
-/brussel	brussel	brussels	
 /brute	brute	brutes	
 /bsff	bsff	bsffs	
-/bu	bu	bus	
 /bubbl	bubble	bubbles	bubbling	bubbly	
 /buck	buck	bucked	bucking	bucks	
+/buckbal	buckball	buckballs	
 /bucket	bucket	buckets	
 /bud	bud	buds	
 /buddi	buddies	buddy	
@@ -417,38 +432,49 @@
 /bwanki	bwankie	bwanky	
 /bygon	bygone	bygones	
 /bylaw	bylaw	bylaws	
+/caballeron	caballeron	caballerons	
+/cabin	cabin	cabins	
 /cackl	cackles	cackling	
+/cadanc	cadance	cadances	
+/cadenza	cadenza	cadenzas	
 /cadet	cadet	cadets	
 /cage	cage	caged	cages	
 /cake	cake	caked	cakes	
 /calcul	calculation	calculations	
+/calendar	calendar	calendars	
 /call	call	called	calling	calls	
 /calm	calm	calmed	calming	calms	
 /camera	camera	cameras	
 /camp	camp	camped	camping	camps	
 /camper	camper	campers	
+/campin	campin	campins	
 /can	can	canned	cans	
-/cancel	cancel	canceled	canceling	cancellations	cancelled	cancelling	cancels	
+/cancel	cancel	canceled	cancellations	cancelled	cancelling	cancels	
 /candi	candied	candies	candy	
 /candid	candid	candidate	candidates	candids	
 /candl	candle	candles	
 /cane	cane	canes	
 /cannon	cannon	cannons	
-/cano	cano	canoe	canoeing	canoes	
+/cano	canoe	canoeing	canoes	
 /canter	canter	cantering	
+/canterlot	canterlot	canterlots	
 /cap	cap	caps	
 /capabl	capabilities	capable	
 /cape	cape	capes	
+/capper	capper	cappers	
 /capsiz	capsize	capsized	capsizing	
 /captain	captain	captains	
 /captiv	captivate	captivating	captive	
 /captur	capture	captured	capturing	
 /car	car	cars	
 /caravan	caravan	caravans	
+/carboload	carboload	carboloads	
 /card	card	cards	
 /care	care	cared	careful	carefully	cares	caring	
 /careless	careless	carelessness	
-/carol	carol	carolers	carols	
+/carl	carl	carls	
+/carol	carolers	carols	
+/carousel	carousel	carousels	
 /carpet	carpet	carpeters	
 /carri	carried	carries	carry	carrying	
 /carriag	carriage	carriages	
@@ -465,6 +491,7 @@
 /categori	categories	category	
 /cater	catered	caterer	catering	
 /cattail	cattail	cattails	
+/cauldron	cauldron	cauldrons	
 /caus	cause	caused	causes	causing	
 /caution	caution	cautioned	
 /cave	cave	caves	
@@ -473,16 +500,16 @@
 /ceas	cease	ceased	
 /ceil	ceiling	ceilings	
 /celebr	celebrate	celebrated	celebrates	celebrating	celebration	celebrations	celebrities	celebrity	
+/celestia	celestia	celestias	
 /cell	cell	cells	
 /centaur	centaur	centaurs	
-/center	center	centered	
 /centerpiec	centerpiece	centerpieces	
 /centuri	centuries	century	
-/ceremoni	ceremonial	ceremonies	ceremony	
+/ceremoni	ceremonial	ceremonies	ceremony	ceremonys	
 /certif	certificate	certificates	
 /certifi	certifiably	certified	
-/ch	ch	chs	
 /chafe	chafe	chafing	
+/chai	chai	chais	
 /chain	chain	chained	chains	
 /chair	chair	chairs	
 /challeng	challenge	challenged	challenges	challenging	
@@ -500,9 +527,9 @@
 /charact	character	characters	
 /charad	charade	charades	
 /charg	charge	charged	charges	charging	
-/chariti	charities	charity	
+/chariti	charities	charity	charitys	
 /charlatan	charlatan	charlatans	
-/charm	charm	charmed	charming	charms	
+/charm	charm	charmed	charming	charmings	charms	
 /chart	chart	charted	charts	
 /chase	chase	chased	chasing	
 /chat	chat	chatting	
@@ -513,16 +540,19 @@
 /checklist	checklist	checklists	
 /cheek	cheek	cheeks	
 /cheer	cheer	cheered	cheerful	cheering	cheers	
-/cheerlead	cheerleaders	cheerleading	
+/cheerile	cheerilee	cheerilees	
+/cheerlead	cheerleaders	cheerleading	cheerleadings	
+/chees	cheese	cheeses	
 /chef	chef	chefs	
-/cherri	cherries	cherry	
+/cherri	cherries	cherry	cherrys	
+/chestnut	chestnut	chestnuts	
 /chew	chew	chewed	chewing	chews	
 /chick	chick	chicks	
 /chicken	chicken	chickens	
 /chill	chill	chilling	chills	
 /chillax	chillax	chillaxing	
 /chime	chime	chimes	chiming	
-/chimera	chimera	chimerae	
+/chimera	chimera	chimerae	chimeras	
 /chip	chip	chipped	chipping	chips	
 /chipmunk	chipmunk	chipmunks	
 /chirp	chirp	chirping	chirps	
@@ -543,10 +573,12 @@
 /chum	chum	chums	
 /chump	chump	chumps	
 /chunk	chunk	chunks	
+/cider	cider	ciders	
+/cinch	cinch	cinchs	
 /circl	circle	circles	circling	
 /circuit	circuit	circuits	
 /circumst	circumstance	circumstances	
-/citi	cities	city	
+/citi	cities	city	citys	
 /citizen	citizen	citizens	
 /clack	clack	clacking	
 /claim	claim	claimed	claiming	claims	
@@ -563,7 +595,9 @@
 /clean	clean	cleaned	cleaning	cleans	
 /cleaner	cleaner	cleaners	
 /clear	clear	cleared	clearing	clears	
+/clementin	clementine	clementines	
 /clench	clench	clenched	clenches	
+/clever	clever	clevers	
 /click	click	clicking	clicks	
 /client	client	clients	
 /cliff	cliff	cliffs	
@@ -589,12 +623,13 @@
 /clutter	clutter	cluttered	cluttering	
 /cmc	cmc	cmcs	
 /coach	coach	coaching	
-/coat	coat	coated	coats	
+/coat	coat	coats	
 /cockatric	cockatrice	cockatrices	
+/coco	coco	cocos	
 /cocoa	cocoa	cocoas	
 /cocoon	cocoon	cocooned	
 /coddl	coddle	coddling	
-/code	code	coded	coding	
+/code	code	coding	
 /coif	coif	coiffed	
 /coil	coil	coils	
 /coin	coin	coins	
@@ -605,6 +640,8 @@
 /collector	collector	collectors	
 /cologn	cologne	colognes	
 /color	color	colored	colorful	coloring	coloritis	colors	
+/coloratura	coloratura	coloraturas	
+/colorcod	colorcode	colorcoded	
 /colt	colt	colts	
 /column	column	columns	
 /comb	comb	combe	combed	
@@ -640,11 +677,12 @@
 /con	con	cons	
 /concentr	concentrate	concentrated	concentration	
 /concern	concern	concerned	concerning	concerns	
-/conclud	conclude	concludes	
+/concert	concert	concerts	
 /conclus	conclusion	conclusions	conclusively	
 /condemn	condemn	condemned	
 /condit	condition	conditioning	conditions	
 /conduct	conducting	conducts	
+/conductor	conductor	conductors	
 /confer	confer	conference	conferences	
 /confess	confess	confessed	confesses	confessing	confession	confessions	
 /confid	confidence	confident	confidently	
@@ -656,6 +694,7 @@
 /congratul	congratulate	congratulation	congratulations	
 /conjur	conjure	conjured	conjurer	conjures	
 /connect	connect	connected	connection	connections	connects	
+/conponi	conponies	conpony	
 /conquer	conquer	conquered	conquering	
 /consequ	consequence	consequences	
 /consid	consider	considered	considering	
@@ -663,9 +702,9 @@
 /consist	consistent	consistently	
 /consol	consolation	console	
 /constel	constellation	constellations	
-/construct	construct	construction	constructive	constructs	
+/construct	construct	construction	constructions	constructive	constructs	
 /consult	consult	consultations	consulting	
-/consum	consume	consumed	consumer	consumes	consuming	
+/consum	consume	consumed	consumes	consuming	
 /contain	contain	contained	containers	containing	contains	
 /content	content	contentment	contents	
 /contest	contest	contestant	contestants	contests	
@@ -679,7 +718,7 @@
 /convert	convert	converted	
 /convey	convey	conveyance	conveys	
 /convinc	convince	convinced	convincing	
-/coo	coo	cooing	coos	
+/coo	cooing	coos	
 /cook	cook	cooked	cooking	cooks	
 /cookbook	cookbook	cookbooks	
 /cooki	cookie	cookies	
@@ -688,7 +727,8 @@
 /cooper	cooperate	cooperation	
 /coordin	coordinated	coordination	
 /copi	copied	copies	copy	copying	
-/core	core	cored	cores	
+/core	core	cores	
+/corn	corn	corns	
 /corner	corner	cornered	corners	
 /correct	correct	corrected	correction	
 /corrupt	corrupt	corrupted	corrupts	
@@ -696,6 +736,7 @@
 /costum	costume	costumes	
 /cough	cough	coughing	coughs	
 /counsel	counsel	counseling	
+/counselor	counselor	counselors	
 /count	count	counted	counting	counts	
 /counter	counter	countered	
 /coupl	couple	couples	
@@ -704,15 +745,16 @@
 /cow	cow	cows	
 /cowbel	cowbell	cowbells	
 /cower	cower	cowering	
-/cozi	cozies	cozy	cozying	
+/cozi	cozies	cozy	cozying	cozys	
 /crab	crab	crabs	
 /crack	crack	cracked	cracking	cracks	
 /cracker	cracker	crackers	
 /crackl	crackle	crackles	crackling	
-/craft	craft	crafted	crafting	crafts	
+/craft	craft	crafted	crafts	
 /cram	cram	crammed	
 /cramp	cramp	cramped	cramping	
 /crank	crank	cranked	cranking	
+/cranki	cranky	crankys	
 /crash	crash	crashed	crashes	crashing	
 /crate	crate	crates	
 /crave	crave	craving	
@@ -742,23 +784,25 @@
 /crossfad	crossfades	crossfading	
 /crow	crow	crowing	crows	
 /crowd	crowd	crowded	crowds	
-/crown	crown	crowned	crowning	
+/crown	crown	crowned	crowning	crowns	
 /cruis	cruise	cruises	cruising	
 /crumbl	crumble	crumbles	crumbling	crumbly	
 /crunch	crunch	crunches	crunching	
 /crusad	crusade	crusader	crusaders	crusading	
 /crush	crush	crushed	crushes	crushing	
-/crust	crust	crusted	crusts	
+/crust	crust	crusts	
 /crystal	crystal	crystaller	crystalling	crystallings	crystally	crystals	
 /crystallin	crystallin	crystalline	
 /cube	cube	cubes	
 /cucumb	cucumber	cucumbers	
-/cuddl	cuddle	cuddles	cuddling	
+/cuddl	cuddle	cuddles	
+/culprit	culprit	culprits	
 /cultur	culture	cultures	
 /cup	cup	cups	
-/cupcak	cupcake	cupcakes	
+/cupcak	cupcake	cupcakeicing	cupcakes	
 /cur	curative	curs	
 /cure	cure	cured	cures	curing	
+/cureal	cureall	curealls	
 /curl	curl	curled	curling	curls	
 /current	current	currently	
 /curri	curried	curry	
@@ -767,30 +811,34 @@
 /cushion	cushion	cushioned	cushions	
 /custom	custom	customer	customers	customize	customs	
 /cut	cut	cuts	cutting	
+/cuteceaã±era	cuteceaã±era	cuteceaã±eras	
 /cutter	cutter	cutters	
 /cycl	cycle	cycles	
 /cymbal	cymbal	cymbals	
 /cynic	cynical	cynicism	
 /dad	dad	dads	
+/daddi	daddy	daddys	
 /daisi	daisies	daisy	
 /dam	dam	dams	
 /damag	damage	damaged	
 /danc	dance	danced	dances	dancing	
 /dancer	dancer	dancers	
 /dang	dang	danged	
-/danger	danger	dangerous	dangerously	
+/danger	danger	dangerous	dangerously	dangers	
 /dare	dare	dared	dares	daring	
 /dark	dark	darkness	
 /darl	darling	darlings	
 /darn	darn	darned	
 /dart	dart	darting	
-/dash	dash	dashed	dashing	
+/dash	dash	dashed	dashing	dashs	
 /date	date	dates	
+/daughter	daughter	daughters	
 /day	day	days	
 /daydream	daydream	daydreaming	
 /daze	daze	dazed	
 /dazzl	dazzle	dazzled	dazzling	dazzlings	
-/deal	deal	dealing	
+/deal	deal	dealing	deals	
+/dealin	dealin	dealins	
 /dear	dear	dears	
 /deari	dearie	dearies	
 /debat	debatable	debate	
@@ -810,7 +858,7 @@
 /defeat	defeat	defeated	defeating	defeats	
 /defend	defend	defended	defending	
 /defens	defense	defenses	
-/defi	defies	defy	defying	
+/defi	defies	defy	
 /defin	define	defined	
 /definit	definite	definitely	definition	definitive	
 /deflat	deflate	deflated	deflates	deflating	deflation	
@@ -829,11 +877,10 @@
 /den	den	dens	
 /deni	denied	deny	denying	
 /dent	dent	dented	dents	
-/depart	depart	departed	department	
+/depart	depart	departed	department	departments	
 /depend	depend	dependable	depended	depending	depends	
 /depress	depressed	depressing	
 /depth	depth	depths	
-/der	der	derful	ders	
 /deris	derisive	derisively	
 /descend	descend	descendants	descending	
 /describ	describe	described	describes	describing	
@@ -848,7 +895,7 @@
 /despond	despondent	despondently	
 /dessert	dessert	desserts	
 /destin	destination	destined	
-/destini	destinies	destiny	
+/destini	destinies	destiny	destinys	
 /destroy	destroy	destroyed	destroying	destroys	
 /detail	detail	detailed	details	
 /detect	detect	detected	detective	detectives	detects	
@@ -877,6 +924,7 @@
 /dinner	dinner	dinners	
 /dip	dip	dipped	dips	
 /direct	direct	directed	directing	direction	directionally	directions	
+/director	director	directors	
 /disabl	disable	disabling	
 /disadvantag	disadvantage	disadvantaged	
 /disagr	disagreement	disagreements	
@@ -910,12 +958,14 @@
 /divid	divide	divided	
 /divin	divin	divine	
 /dizzi	dizziness	dizzy	
+/dj	dj	djs	
 /do	do	doing	dos	
 /dock	dock	docking	docks	
 /doctor	doctor	doctors	
 /document	document	documenting	documents	
 /dodg	dodge	dodging	
 /doe	doe	does	
+/doeuvr	doeuvre	doeuvres	
 /dog	dog	dogs	
 /doggi	doggie	doggies	
 /dogi	dogie	dogies	
@@ -923,19 +973,19 @@
 /dolphin	dolphin	dolphins	
 /domin	dominance	dominate	domination	
 /donat	donate	donations	
-/done	done	doned	
 /dong	dong	donging	
 /donut	donut	donuts	
 /doom	doom	doomed	dooming	
 /door	door	doors	
 /doormat	doormat	doormats	
-/dot	dot	dots	dotted	
+/dot	dot	dots	
 /doubl	double	doubled	doubles	doubling	
+/doublecheck	doublecheck	doublechecking	
 /doubt	doubt	doubted	doubting	doubts	
 /dove	dove	doves	
 /down	down	downed	
 /drag	drag	dragged	dragging	drags	
-/dragon	dragon	dragons	
+/dragon	dragon	dragoneating	dragons	
 /dragonish	dragonish	dragonishness	
 /drain	drain	drained	draining	drains	
 /drama	drama	dramas	
@@ -946,25 +996,25 @@
 /dread	dread	dreaded	dreadful	dreadfully	
 /dream	dream	dreamed	dreaming	dreams	
 /dress	dress	dressed	dresses	dressing	
-/dressmak	dressmaker	dressmaking	
+/dressmak	dressmaker	dressmakers	dressmakings	
 /dri	dried	dry	
 /drift	drift	drifted	drifting	
 /drill	drill	drilling	drills	
 /drink	drink	drinking	drinks	
 /drip	drip	dripping	
-/drive	drive	drives	driving	
+/drive	drive	drives	driving	drivings	
 /driver	driver	drivers	
 /drone	drone	drones	droning	
 /drool	drooling	drools	
 /drop	drop	dropped	dropping	drops	
 /drown	drown	drowned	
 /drum	drum	drummed	drumming	drums	
-/dub	dub	dubbed	dubs	
+/dub	dub	dubbed	
 /duck	duck	ducked	ducking	ducks	
 /duckl	duckling	ducklings	
 /dud	dud	duds	
 /dude	dude	dudes	
-/duel	duel	dueled	duels	
+/duel	duel	duels	
 /dull	dull	dullness	
 /dumb	dumb	dumbed	
 /dumbbel	dumbbell	dumbbells	
@@ -973,41 +1023,47 @@
 /dungeon	dungeon	dungeons	
 /duplic	duplicate	duplicates	duplication	
 /dust	dust	dusting	
+/dusti	dusty	dustys	
 /duti	duties	duty	
 /dweeb	dweeb	dweebs	
-/dy	dy	dyed	
 /dye	dye	dyeing	dyes	
 /dynam	dynamic	dynamics	
 /eagl	eagle	eagles	
 /ear	ear	earring	earrings	ears	
 /earn	earn	earned	earning	
-/earth	earth	earths	
 /eat	eat	eating	eats	
 /eavesdrop	eavesdrop	eavesdropping	
 /echo	echo	echoed	echoes	echoing	
 /eclips	eclipse	eclipsed	
 /edg	edge	edges	
-/edit	edit	edited	editing	edition	editions	
+/edit	edited	editing	edition	editions	
+/editor	editor	editors	
 /educ	education	educational	
+/eea	eea	eeas	
 /eel	eel	eels	
 /effect	effect	effective	effectiveness	effects	
 /effici	efficiency	efficient	
 /effort	effort	efforts	
+/eg	eg	egs	
 /egg	egg	eggs	
 /egghead	egghead	eggheads	
+/ego	ego	egos	
 /elat	elated	elation	
 /elect	elect	elected	election	
 /electr	electric	electrical	electricity	
 /eleg	elegance	elegant	
 /element	element	elemental	elements	
 /elimin	eliminate	elimination	
+/els	else	elses	
+/email	email	emails	
 /embarrass	embarrass	embarrassed	embarrassing	embarrassment	
 /embellish	embellished	embellishing	
+/ember	ember	embers	
 /embrac	embrace	embraced	embracing	
 /emerald	emerald	emeralds	
 /emerg	emerged	emergency	emerging	
 /emot	emoting	emotional	emotionally	emotions	
-/empir	empire	empirically	
+/empir	empire	empires	empirically	
 /employe	employee	employees	
 /encas	encased	encases	
 /enchant	enchant	enchanted	enchanter	enchanting	enchantment	
@@ -1036,6 +1092,7 @@
 /envelop	envelope	enveloping	
 /equal	equal	equality	equalization	equally	equals	
 /equat	equate	equates	equation	
+/equestria	equestria	equestrias	
 /equin	equine	equines	
 /eras	erase	erased	erasers	erasing	
 /errand	errand	errands	
@@ -1054,11 +1111,17 @@
 /eve	eve	eves	
 /even	even	evening	evenings	
 /event	event	events	
-/ever	ever	evers	
+/ever	ever	everer	evers	
+/everybodi	everybody	everybodys	
+/everycreatur	everycreature	everycreatures	
+/everyon	everyone	everyones	
+/everyponi	everypony	everyponys	
+/everyth	everything	everythings	
+/everythin	everythin	everythins	
 /evoc	evocation	evocative	
 /evolv	evolve	evolved	
 /ewe	ewe	ewes	
-/exagger	exaggerated	exaggerating	exaggeration	
+/exagger	exaggerated	exaggerating	exaggeration	exaggerations	
 /exam	exam	exams	
 /examin	examined	examining	
 /excel	excel	excellence	excellency	excellent	
@@ -1098,7 +1161,7 @@
 /extens	extension	extensions	extensive	
 /extinguish	extinguish	extinguisher	
 /extrem	extreme	extremely	
-/eye	eye	eyed	eyes	
+/eye	eye	eyes	
 /eyebal	eyeball	eyeballed	eyeballs	
 /eyelash	eyelash	eyelashes	
 /fabric	fabric	fabricated	fabrics	
@@ -1108,18 +1171,20 @@
 /facet	faceted	facets	
 /facin	facin	facinating	
 /fact	fact	facts	
+/factori	factory	factorys	
 /fad	fad	fads	
 /fade	fade	faded	fades	fading	
 /fail	fail	failed	failing	fails	
 /failur	failure	failures	
 /faint	faint	fainted	fainting	faints	
-/fair	fair	faire	
+/fair	fair	faire	faires	fairs	
+/fairweath	fairweather	fairweathers	
 /faith	faith	faithful	
 /fake	fake	faked	fakes	faking	
-/falcon	falcon	falconer	falcons	
+/falcon	falcon	falconers	falcons	
 /fall	fall	falling	falls	
 /fame	fame	famed	
-/famili	families	family	
+/famili	families	family	familys	
 /fan	fan	fans	
 /fanponi	fanponies	fanpony	
 /fantasi	fantasies	fantasy	
@@ -1128,11 +1193,12 @@
 /farewel	farewell	farewells	
 /farm	farm	farming	farms	
 /farmer	farmer	farmers	
-/fashion	fashion	fashionable	fashioned	fashions	
+/fashion	fashion	fashionable	fashions	
 /fashionista	fashionista	fashionistas	
 /fast	fast	fasting	
-/fate	fate	fateful	
+/fate	fate	fateful	fates	
 /father	father	fathers	
+/fauna	fauna	faunas	
 /favor	favor	favorable	favors	
 /favorit	favorite	favorites	
 /fear	fear	feared	fearful	fears	
@@ -1144,6 +1210,7 @@
 /fee	fee	fees	
 /feed	feed	feeding	feeds	
 /feel	feel	feeling	feelings	feels	
+/feelin	feelin	feelins	
 /fella	fella	fellas	
 /feller	feller	fellers	
 /fenc	fence	fences	
@@ -1152,47 +1219,51 @@
 /fetch	fetch	fetched	fetching	
 /fiber	fiber	fibers	
 /fiction	fiction	fictional	
+/fido	fido	fidos	
 /field	field	fields	
-/fight	fight	fighting	fights	
+/fight	fight	fighting	fightings	fights	
 /figur	figure	figured	figures	figuring	
 /figurin	figurin	figurines	
 /file	file	filed	files	filing	
 /fill	fill	filled	filling	fills	
-/filli	filli	fillies	filly	
+/filli	fillies	filly	fillys	
 /film	film	filmed	filming	
 /filter	filter	filtered	
+/filthi	filthy	filthys	
 /final	final	finale	finally	finals	
 /find	find	finding	findings	finds	
-/fine	fine	fines	
+/fine	fine	fineings	fines	
 /finger	finger	fingers	
-/finish	finish	finished	finishes	finishing	
+/finish	finish	finished	finishes	finishing	finishs	
 /fire	fire	fired	fires	firing	
+/firebreath	firebreath	firebreathing	
 /firework	firework	fireworks	
 /first	first	firsts	
 /fish	fish	fishing	
-/fishi	fishies	fishy	
+/fishi	fishies	fishy	fishys	
 /fit	fit	fits	fitted	fitting	fittings	
-/five	five	fives	fiving	
+/five	five	fives	
 /fix	fix	fixed	fixes	fixing	
 /fizzl	fizzle	fizzles	fizzling	
 /flag	flag	flags	
 /flake	flake	flakes	
+/flam	flam	flams	
 /flame	flame	flames	flaming	
 /flamingo	flamingo	flamingos	
 /flank	flank	flanks	
 /flap	flap	flapping	flaps	
-/flare	flare	flaring	
-/flash	flash	flashes	flashing	
+/flare	flare	flares	flaring	
+/flash	flash	flashes	flashing	flashs	
 /flashlight	flashlight	flashlights	
 /flatten	flatten	flattens	
 /flatter	flattered	flatterer	flattering	
-/flavor	flavor	flavored	flavors	
+/flavor	flavor	flavors	
 /flaw	flaw	flawed	flaws	
 /flea	flea	fleas	
-/fleck	flecked	flecks	
-/fli	flies	fly	flying	
+/fli	flies	fly	flying	flyings	
 /flick	flick	flicking	flicks	
 /flicker	flickering	flickers	
+/flim	flim	flims	
 /flip	flip	flipping	flips	
 /float	float	floating	floats	
 /floati	floatie	floaty	
@@ -1203,30 +1274,33 @@
 /flow	flow	flowing	flows	
 /flower	flower	flowering	flowers	
 /flunk	flunk	flunked	
+/flurri	flurry	flurrys	
 /flush	flushes	flushing	
 /flutter	flutter	fluttering	
 /fluttershi	fluttershy	fluttershys	
+/flyder	flyder	flyders	
 /flyer	flyer	flyers	
 /foal	foal	foals	
 /foalsitt	foalsitter	foalsitters	
 /focus	focused	focusing	
+/fog	fog	fogs	
 /fold	fold	folding	folds	
 /folk	folk	folks	
 /folli	follies	folly	
 /follow	follow	followed	follower	followers	following	follows	
 /food	food	foods	
+/foodtast	foodtasters	foodtasting	
 /fool	fool	fooled	fooling	fools	
 /foolish	foolish	foolishness	
 /forc	force	forced	forcefully	forces	forcing	
 /forest	forest	forests	
-/forev	forev	forever	
 /forget	forget	forgets	forgetting	
 /forgiv	forgive	forgiveness	forgives	forgiving	
 /form	form	formative	formed	forming	forms	
 /formal	formal	formality	
 /fortun	fortunate	fortunately	fortune	
 /forum	forum	forums	
-/forward	forward	forwarding	forwardness	forwards	
+/forward	forward	forwardness	forwards	
 /fossil	fossil	fossilization	fossils	
 /foster	fostered	fostering	
 /found	found	founded	founding	
@@ -1243,6 +1317,7 @@
 /freez	freeze	freezing	
 /fret	fret	frets	
 /fri	fried	fries	fry	
+/friday	friday	fridays	
 /friend	friend	friends	
 /friendship	friendship	friendships	
 /fright	fright	frightful	
@@ -1256,14 +1331,17 @@
 /frown	frown	frowning	frowns	
 /fruit	fruit	fruits	
 /frustrat	frustrated	frustrating	frustration	
-/fuel	fuel	fueled	fuels	
+/fuel	fuel	fuels	
 /fulfil	fulfill	fulfilled	
+/fun	fun	funs	
 /function	function	functional	functioning	functions	
-/fund	fund	funded	funds	
-/fundrais	fundraiser	fundraising	
+/fund	funded	funds	
+/fundrais	fundraise	fundraiser	fundraising	
+/fur	fur	furs	
 /fuse	fuse	fuses	
 /fuss	fuss	fussing	
 /futur	future	futures	
+/gabbi	gabby	gabbys	
 /gag	gag	gagging	gags	
 /gain	gain	gained	gaining	gains	
 /gal	gal	gals	
@@ -1279,11 +1357,12 @@
 /gather	gather	gathered	gathering	gatherings	
 /gaug	gauge	gauging	
 /gear	gear	gearing	gears	
+/gearcarri	gearcarrier	gearcarrying	
 /gecko	gecko	geckos	
 /gem	gem	gems	
 /gemston	gemstone	gemstones	
 /genealog	genealogical	genealogy	
-/gener	general	generalized	generation	generations	generator	generic	generous	generously	
+/gener	general	generalized	generation	generations	generator	generators	generic	generous	generously	
 /genet	genetic	genetically	
 /genr	genre	genres	
 /gentleponi	gentleponies	gentlepony	
@@ -1296,22 +1375,25 @@
 /geyser	geyser	geysers	
 /ghost	ghost	ghosts	
 /gift	gift	gifted	gifting	gifts	
+/giftgiv	giftgiver	giftgiving	
 /giggl	giggle	giggles	giggling	
+/gilda	gilda	gildas	
 /girl	girl	girls	
 /girlfriend	girlfriend	girlfriends	
 /give	give	gives	giving	
 /giver	giver	givers	
+/gladman	gladmane	gladmanes	
 /glamor	glamor	glamorous	
 /glanc	glance	glanced	
 /glass	glass	glasses	
 /gleam	gleam	gleaming	gleams	
-/glide	glide	gliding	
-/glimmer	glimmer	glimmering	
+/glimmer	glimmer	glimmering	glimmers	
 /glint	glint	glints	
 /glitter	glitter	glittering	
 /glitz	glitz	glitzing	
 /gloat	gloat	gloating	
 /globe	globe	globes	
+/gloriosa	gloriosa	gloriosas	
 /glow	glow	glowed	glowing	glows	
 /glug	glug	glugs	
 /go	go	going	
@@ -1320,21 +1402,23 @@
 /gobbl	gobble	gobbled	gobbles	gobbling	
 /goblet	goblet	goblets	
 /goggl	goggle	goggles	
+/gold	gold	golds	
+/goldi	goldie	goldies	
 /good	good	goodness	goods	
 /goodby	goodbye	goodbyes	
 /goodi	goodie	goodies	goody	
 /goof	goof	goofing	
+/goshdarn	goshdarn	goshdarned	
 /gossip	gossip	gossiping	
 /got	got	gots	
 /gown	gown	gowns	
-/goyl	goyle	goyles	
 /grab	grab	grabbed	grabbing	
 /grace	grace	graced	graceful	graces	
 /grade	grade	grades	grading	
 /graduat	graduate	graduated	graduates	graduation	
 /grandmar	grandmare	grandmares	
 /grandpa	grandpa	grandpas	
-/granni	grannies	granny	
+/granni	grannies	granny	grannys	
 /grant	granted	grants	
 /grape	grape	grapes	
 /grate	grateful	gratefully	
@@ -1342,13 +1426,16 @@
 /gray	gray	graying	grays	
 /great	great	greatness	
 /greet	greet	greeting	greetings	greets	
+/greta	greta	gretas	
 /griffon	griffon	griffons	
+/griffonston	griffonstone	griffonstones	
 /grin	grin	grins	
 /grind	grinding	grinds	
 /grip	grip	gripping	
 /grit	grit	gritted	
 /groan	groan	groaning	groans	
 /groceri	groceries	grocery	
+/grogar	grogar	grogars	
 /groom	groom	groomed	grooming	
 /groov	groove	grooves	
 /gross	gross	grossed	
@@ -1356,29 +1443,33 @@
 /group	group	groups	
 /grow	grow	growing	grows	
 /growl	growl	growling	growls	
+/grownup	grownup	grownups	
 /grub	grub	grubs	
+/gruff	gruff	gruffs	
 /grumbl	grumble	grumbles	grumbling	
 /grunt	grunt	grunting	grunts	
 /guarante	guarantee	guaranteed	guarantees	
 /guard	guard	guarding	guards	
 /guardian	guardian	guardians	
+/guardiangoyl	guardiangoyle	guardiangoyles	
 /guess	guess	guessed	guesses	guessing	
 /guest	guest	guests	
 /guid	guide	guided	guides	
 /gulp	gulp	gulping	gulps	
 /gum	gum	gums	
-/gummi	gummies	gummy	
-/gun	gun	guns	
+/gummi	gummies	gummy	gummys	
 /gurgl	gurgle	gurgles	gurgling	
 /gust	gust	gusts	
+/gustav	gustave	gustaves	
 /gut	gut	guts	
 /guy	guy	guys	
 /ha	ha	has	
 /habit	habit	habitation	habits	
 /habitat	habitat	habitats	
 /hack	hack	hacking	hacks	
-/haiku	haiku	haikus	
-/hair	hair	haired	hairs	
+/haiku	haiku	haikuing	haikus	
+/hair	hair	hairs	
+/halfpint	halfpint	halfpints	
 /hall	hall	halls	
 /hallway	hallway	hallways	
 /hammer	hammer	hammering	
@@ -1393,19 +1484,20 @@
 /happi	happiness	happy	
 /har	har	harness	harnessed	harnessing	
 /hard	hard	hardness	
-/harm	harm	harming	
+/harm	harm	harming	harms	
 /harmon	harmonize	harmonizing	
 /harmoni	harmonies	harmonious	harmony	
 /harp	harp	harping	
 /harsh	harsh	harshed	harshing	
 /harvest	harvest	harvested	harvesting	harvests	
+/harvestin	harvestin	harvestins	
 /hast	hast	haste	
 /hat	hat	hats	
 /hatch	hatch	hatched	hatches	hatching	
 /hate	hate	hated	hates	hating	
 /haul	haul	hauling	
 /haunch	haunch	haunches	
-/have	have	haves	having	
+/have	have	having	
 /hazard	hazard	hazardous	
 /he	he	hes	
 /head	head	headed	heading	heads	
@@ -1414,8 +1506,8 @@
 /heal	heal	healed	healing	
 /healer	healer	healers	
 /hear	hear	hearing	hears	
-/heart	heart	hearted	hearts	
-/hearti	heartie	hearty	
+/heart	heart	hearts	
+/hearth	hearth	hearths	
 /heat	heat	heated	heating	heats	
 /heav	heave	heaves	heaving	
 /heaven	heaven	heavens	
@@ -1425,22 +1517,25 @@
 /heist	heist	heisting	
 /hello	hello	hellos	
 /helmet	helmet	helmets	
-/help	help	helped	helpful	helping	helps	
+/help	help	helped	helpful	helping	helpings	helps	
 /helper	helper	helpers	
 /hem	hem	hemmed	hems	
+/hemlin	hemline	hemlines	
 /hen	hen	henning	hens	
 /henchponi	henchponies	henchpony	
 /her	her	hers	
 /herd	herd	herded	herding	
 /herder	herder	herders	
-/hero	hero	heroes	
+/here	here	heres	
+/hero	hero	heroes	heros	
 /hesit	hesitating	hesitation	
 /hex	hex	hexed	
 /hi	hi	his	
 /hibern	hibernate	hibernating	hibernation	
 /hiccup	hiccup	hiccups	
 /hide	hide	hides	hiding	
-/high	high	highness	
+/high	high	highness	highs	
+/highfiv	highfive	highfives	highfiving	
 /highlight	highlight	highlighters	highlighting	highlights	
 /hightail	hightail	hightailed	
 /hill	hill	hills	
@@ -1464,24 +1559,25 @@
 /hole	hole	holed	holes	
 /holiday	holiday	holidays	
 /holler	holler	hollering	
+/hollow	hollow	hollows	
 /hologram	hologram	holograms	
 /home	home	homes	
 /honk	honk	honked	honking	honks	
 /honor	honor	honorable	honored	honoring	
 /hoo	hoo	hooing	
-/hoof	hoof	hoofed	hoofs	
+/hoof	hoof	hoofed	
+/hoofbump	hoofbump	hoofbumps	
 /hooffield	hooffield	hooffields	
 /hooficur	hooficure	hooficures	
 /hoofington	hoofington	hoofingtons	
 /hoofstep	hoofstep	hoofsteps	
 /hook	hook	hooked	hooks	
-/hoop	hoop	hooping	hoops	
+/hoop	hoop	hoops	
 /hoot	hoot	hooting	hoots	
-/hoov	hooved	hooves	
 /hop	hop	hopping	
 /hope	hope	hoped	hopefully	hopes	hoping	
 /horn	horn	horned	horns	
-/hornet	hornet	hornets	
+/hornwrit	hornwriting	hornwritings	
 /horrend	horrendous	horrendously	
 /horribl	horrible	horribly	
 /horrifi	horrified	horrifying	
@@ -1492,7 +1588,9 @@
 /host	host	hosted	hosting	hosts	
 /hour	hour	hours	
 /hous	house	housed	houses	
+/housesit	housesit	housesitting	
 /hover	hovering	hovers	
+/how	how	hows	
 /howl	howl	howling	howls	
 /huff	huff	huffs	
 /hug	hug	hugging	hugs	
@@ -1521,6 +1619,10 @@
 /identifi	identified	identify	identifying	
 /ignit	ignite	ignited	igniter	ignites	igniting	
 /ignor	ignorant	ignore	ignored	ignoring	
+/ii	ii	iis	
+/iii	iii	iiis	
+/iiit	iiit	iiits	
+/iit	iit	iits	
 /ill	ill	illness	illnesses	
 /illus	illusion	illusions	
 /illustr	illustrates	illustrations	
@@ -1530,7 +1632,7 @@
 /immedi	immediate	immediately	
 /immort	immortal	immortality	immortalized	
 /impenetr	impenetrability	impenetrable	
-/import	import	importance	important	imported	
+/import	importance	important	imported	
 /impos	impose	imposing	
 /imposs	impossibilities	impossible	impossibly	
 /impress	impress	impressed	impression	impressions	impressive	
@@ -1543,12 +1645,10 @@
 /inch	inch	inches	
 /inciner	incinerated	incinerates	
 /includ	include	included	includes	including	
-/inclus	inclusions	inclusive	
 /incoher	incoherent	incoherently	
 /inconveni	inconvenience	inconveniently	
 /increas	increase	increased	increases	
 /incred	incredible	incredibly	
-/index	index	indexed	
 /indic	indicated	indicating	indication	
 /indign	indignant	indignation	
 /individu	individual	individually	
@@ -1561,7 +1661,6 @@
 /inflat	inflatable	inflated	inflates	inflating	
 /influenc	influence	influenced	
 /inform	inform	informal	information	informing	
-/ing	ing	ings	
 /ingredi	ingredient	ingredients	
 /inhal	inhalation	inhale	inhales	inhaling	
 /initi	initial	initially	initials	initiation	initiative	
@@ -1569,13 +1668,12 @@
 /inn	inn	inns	
 /innoc	innocence	innocent	innocently	
 /insan	insane	insanely	
-/insid	inside	insider	
+/insid	inside	insiders	
 /insight	insight	insightful	
 /insincer	insincere	insincerely	
 /insist	insist	insisted	insists	
-/inspect	inspected	inspecting	
 /inspector	inspector	inspectors	
-/inspir	inspiration	inspirational	inspire	inspired	inspires	inspiring	
+/inspir	inspiration	inspirational	inspire	inspireation	inspired	inspires	inspiring	
 /instal	install	installation	installed	
 /instinct	instinct	instincts	
 /institut	institute	institution	institutions	
@@ -1587,7 +1685,7 @@
 /intend	intend	intended	intends	
 /intens	intense	intensely	
 /intensifi	intensifies	intensify	
-/intent	intent	intention	intentioned	intentions	intents	
+/intent	intent	intention	intentions	intents	
 /interact	interact	interacting	interaction	
 /interest	interest	interested	interesting	interests	
 /interfer	interfere	interferes	
@@ -1613,7 +1711,7 @@
 /itch	itch	itches	itching	
 /item	item	items	
 /ith	ith	ithing	
-/iti	itis	ity	
+/itit	itit	itits	
 /ja	ja	jas	
 /jack	jack	jacking	
 /jacket	jacket	jackets	
@@ -1629,14 +1727,15 @@
 /jingl	jingle	jingles	jingling	
 /job	job	jobs	
 /jockey	jockey	jockeying	
+/joe	joe	joes	
 /join	join	joined	joining	joins	
 /joint	joint	joints	
 /joke	joke	jokes	joking	
-/joker	joker	jokers	
 /jolt	jolt	jolts	
 /journal	journal	journalism	journals	
 /journey	journey	journeys	
 /joy	joy	joyful	joys	
+/jubile	jubilee	jubilees	
 /judg	judge	judged	judges	judging	
 /judgment	judgment	judgmental	
 /juggl	juggle	juggling	
@@ -1650,27 +1749,31 @@
 /kazoo	kazoo	kazoos	
 /keep	keep	keeping	keeps	
 /keeper	keeper	keepers	
+/kerfuffl	kerfuffle	kerfuffles	
 /kernel	kernel	kernels	
 /key	key	keys	
 /kick	kick	kicked	kicking	kicks	
 /kid	kid	kidding	kids	
 /kidnap	kidnapped	kidnapping	
 /kill	killing	kills	
-/kin	kin	kins	
 /kind	kind	kindness	kinds	
+/king	king	kings	
 /kingdom	kingdom	kingdoms	
 /kiss	kiss	kissed	kisses	kissing	
 /kitchen	kitchen	kitchens	
 /kite	kite	kites	
-/kitti	kitties	kitty	
+/kitti	kitties	kitty	kittys	
+/klo	klo	klos	
 /klugetown	klugetown	klugetowner	klugetowners	
 /knee	knee	knees	
-/knit	knit	knitted	knitting	
+/knit	knit	knitting	knittings	
 /knock	knock	knocked	knocking	knocks	
 /know	know	knowing	knows	
+/knuckerbock	knuckerbocker	knuckerbockers	
 /knucklehead	knucklehead	knuckleheads	
 /la	la	las	
 /label	label	labeled	
+/lace	lace	laces	
 /lack	lack	lacked	lacking	lacks	
 /ladder	ladder	ladders	
 /ladi	ladies	lady	
@@ -1689,19 +1792,20 @@
 /later	later	laters	
 /laugh	laugh	laughed	laughing	laughs	
 /launch	launch	launched	launches	launching	
+/lava	lava	lavas	
+/lavend	lavender	lavenders	
 /law	law	lawfully	laws	
 /lay	lay	laying	lays	
 /layer	layer	layers	
-/le	le	les	
 /lead	lead	leading	leads	
 /leader	leader	leaders	
 /leak	leak	leaking	leaks	
-/lean	lean	leaning	leans	
+/lean	lean	leaning	leanings	leans	
 /leap	leap	leaped	leaping	
-/learn	learn	learned	learning	learns	
+/learn	learn	learned	learning	learnings	learns	
 /leav	leave	leaves	leaving	
 /lectur	lecture	lectured	lectures	
-/leg	leg	legged	leggings	legs	
+/leg	leg	leggings	legs	
 /legend	legend	legends	
 /lemon	lemon	lemons	
 /lend	lend	lending	
@@ -1711,17 +1815,18 @@
 /level	level	levels	
 /levit	levitating	levitation	
 /li	li	lis	
-/librari	libraries	library	
+/librari	libraries	library	librarys	
 /librarian	librarian	librarians	
 /lick	lick	licked	licking	licks	
 /lie	lie	lied	lies	lying	
+/life	life	lifes	
 /lifeboat	lifeboat	lifeboats	
 /lifesav	lifesaver	lifesaving	
 /lift	lift	lifted	lifting	lifts	
 /light	light	lighting	lights	
 /like	like	liked	likely	likeness	likes	liking	
 /lili	lilies	lily	
-/limb	limb	limbed	limbs	
+/limb	limb	limbs	
 /limit	limit	limitations	limited	limits	
 /line	line	lined	lines	lining	
 /linen	linen	linens	
@@ -1743,27 +1848,34 @@
 /long	long	longed	
 /look	look	looked	looking	looks	
 /looki	lookie	looky	
-/loop	loop	looped	loops	
+/loop	loop	looped	
+/loopdehoop	loopdehoop	loopdehooping	
+/loopdeloop	loopdeloop	loopdeloops	
+/lord	lord	lords	
 /lose	lose	loses	losing	
 /loser	loser	losers	
 /loss	loss	losses	
 /lot	lot	lots	
 /loung	lounge	lounging	
 /love	love	loved	lovely	loves	loving	
+/lovelovelov	lovelovelove	loveloveloved	
 /lovey	lovey	loveys	
 /lower	lower	lowered	lowering	
 /lump	lump	lumps	
+/luna	luna	lunas	
 /lunch	lunch	lunches	
 /lurk	lurk	lurking	lurks	
 /lux	lux	luxe	
 /luxuri	luxuriating	luxurious	luxury	
+/mac	mac	macs	
 /machin	machine	machines	
 /mad	mad	madness	
 /madam	madam	madame	
+/magazin	magazine	magazines	
 /mage	mage	mages	
 /magic	magic	magical	magically	magics	
 /magician	magician	magicians	
-/magnet	magnet	magnetic	
+/magnet	magnet	magnetic	magnets	
 /magnifi	magnifies	magnifying	
 /magnific	magnificence	magnificent	
 /mail	mail	mailing	mails	
@@ -1771,11 +1883,13 @@
 /majesti	majesties	majesty	
 /make	make	makes	making	
 /makeov	makeover	makeovers	
-/maker	maker	makers	
+/makin	makin	makins	
 /mama	mama	mamas	
 /manag	manage	managed	management	manager	managers	manages	managing	
 /mane	mane	manes	
+/manehattan	manehattan	manehattans	
 /manehattanit	manehattanite	manehattanites	
+/manemend	manemend	manemending	
 /maniac	maniacal	maniacally	
 /manipul	manipulate	manipulated	manipulative	
 /mannequin	mannequin	mannequins	
@@ -1789,6 +1903,7 @@
 /market	market	marketing	
 /marri	married	marry	marrying	
 /marshmallow	marshmallow	marshmallows	
+/martingal	martingale	martingales	
 /marvel	marvel	marveling	marvelous	
 /mash	mash	mashed	mashing	
 /mask	mask	masked	masks	
@@ -1798,15 +1913,20 @@
 /mate	mate	mates	
 /materi	material	materialize	materials	
 /matey	matey	mateys	
+/matilda	matilda	matildas	
 /matter	matter	mattered	matters	
 /mattress	mattress	mattresses	
 /matur	mature	matured	
+/maud	maud	mauds	
 /maulwurf	maulwurf	maulwurfs	
 /mayb	maybe	maybes	
+/mayor	mayor	mayors	
 /maze	maze	mazes	
 /mcbiggun	mcbiggun	mcbigguns	
 /mccolt	mccolt	mccolts	
+/mcintosh	mcintosh	mcintoshs	
 /me	me	mes	
+/meadowbrook	meadowbrook	meadowbrooks	
 /meal	meal	meals	
 /mean	mean	meaning	meanness	means	
 /meani	meanie	meanies	
@@ -1841,13 +1961,15 @@
 /microphon	microphone	microphones	
 /migrat	migrate	migration	
 /miladi	miladies	milady	
+/mild	mild	milds	
 /mile	mile	miles	
 /milk	milk	milked	milking	
 /milkshak	milkshake	milkshakes	
 /million	million	millions	
 /mime	mimes	miming	
 /mind	mind	minded	minding	minds	
-/miner	miner	mineralization	minerals	miners	
+/mine	mine	mines	
+/miner	miner	minerals	miners	
 /mingl	mingle	mingled	mingling	
 /mini	mini	minis	
 /minion	minion	minions	
@@ -1862,20 +1984,24 @@
 /mission	mission	missions	
 /mist	mist	mists	
 /mistak	mistake	mistakes	
+/mistman	mistmane	mistmanes	
 /misunderstand	misunderstand	misunderstanding	
 /mite	mite	mites	
 /mix	mix	mixed	mixes	mixing	
 /mixtur	mixture	mixtures	
+/mixup	mixup	mixups	
 /moan	moan	moaning	moans	
 /mob	mob	mobbed	
 /mock	mock	mocking	mocks	
 /model	model	modeled	modeling	modelle	models	
 /moder	moderate	moderation	
 /moistur	moisture	moisturizers	
-/mold	mold	molded	
 /molt	molt	molting	molts	
-/molter	molter	molters	
+/mom	mom	moms	
 /moment	moment	momentous	moments	
+/momma	momma	mommas	
+/mommi	mommy	mommys	
+/monday	monday	mondays	
 /monkey	monkey	monkeys	
 /monster	monster	monsters	
 /month	month	months	
@@ -1883,7 +2009,6 @@
 /moon	moon	moons	
 /mop	mop	mopped	
 /moral	moral	morale	moralizing	
-/more	more	mores	
 /morn	morning	mornings	
 /mortifi	mortified	mortifying	
 /mosey	mosey	moseying	
@@ -1896,6 +2021,7 @@
 /move	move	moved	moves	moving	
 /movi	movie	movies	
 /mr	mr	mrs	
+/mudbriar	mudbriar	mudbriars	
 /muddi	muddied	muddy	muddying	
 /muffin	muffin	muffins	
 /mule	mule	mules	
@@ -1903,26 +2029,28 @@
 /multipli	multiplies	multiply	multiplying	
 /mumbl	mumble	mumbles	mumbling	
 /munch	munch	munches	munching	
+/muriel	muriel	muriels	
 /murmur	murmuring	murmurs	
 /muscl	muscle	muscles	
 /muse	muse	muses	
 /museum	museum	museums	
 /music	music	musical	musicality	musicals	
 /musician	musician	musicians	
+/musthav	musthave	musthaves	
 /mutt	mutt	mutts	
 /mutter	muttered	muttering	mutterings	mutters	
-/mysteri	mysteries	mysterious	mysteriously	mystery	
+/muzzl	muzzle	muzzles	
+/mysteri	mysteries	mysterious	mysteriously	mystery	mysterys	
 /mystic	mystic	mystical	
 /nacho	nacho	nachos	
 /nail	nail	nailed	nailing	nails	
 /name	name	named	namely	names	
-/nana	nana	nanas	
-/nap	nap	napped	napping	naps	
+/nap	nap	napping	naps	
 /napkin	napkin	napkins	
 /narrat	narrate	narrating	narrator	
 /narrow	narrow	narrowed	narrowing	
 /nation	nation	national	nations	
-/natur	natural	naturally	naturals	nature	
+/natur	natural	naturally	naturals	nature	natures	
 /navig	navigate	navigation	
 /neat	neat	neatness	
 /neck	neck	necks	
@@ -1930,7 +2058,6 @@
 /need	need	needed	needing	needs	
 /needl	needle	needles	
 /neg	negative	negatively	negativity	
-/negoti	negotiable	negotiator	
 /neigh	neigh	neighing	neighs	
 /neighbor	neighbor	neighboring	neighbors	
 /neighsay	neighsay	neighsayers	
@@ -1942,24 +2069,31 @@
 /nice	nice	nicely	
 /nicknam	nickname	nicknames	
 /night	night	nights	
-/nightmar	nightmare	nightmared	nightmares	
+/nightmar	nightmare	nightmares	
 /nincompoop	nincompoop	nincompoops	
 /nirik	nirik	niriks	
+/no	no	nos	
+/nobodi	nobody	nobodys	
+/nocreatur	nocreature	nocreatures	
 /nod	nod	nodded	
 /noi	noi	noies	
 /nois	noise	noises	
 /noisemak	noisemaker	noisemakers	
 /nom	nom	nomming	
-/noodl	noodle	noodles	
+/nonacc	nonaccent	nonaccented	
+/nonponi	nonponies	nonpony	
+/noponi	nopony	noponys	
 /normal	normal	normally	
 /nose	nose	noses	
-/not	not	nots	
 /note	note	noted	notes	noting	
 /notebook	notebook	notebooks	
 /noth	nothing	nothings	
+/nothin	nothin	nothins	
 /notic	notice	noticed	notices	noticing	
 /notori	notorious	notoriously	
 /novel	novel	novels	
+/novo	novo	novos	
+/now	now	nows	
 /nowher	nowhere	nowheres	
 /nuanc	nuance	nuanced	nuances	
 /nudg	nudge	nudging	
@@ -1979,20 +2113,22 @@
 /occasion	occasional	occasionally	
 /occur	occur	occurring	occurs	
 /odd	odd	odds	
-/oeuvr	oeuvre	oeuvres	
 /offend	offend	offended	
 /offens	offense	offensive	
 /offer	offer	offered	offering	offers	
 /offic	office	officers	
 /offici	official	officially	officiate	officiating	
+/ohhh	ohhh	ohhhs	
 /oink	oink	oinking	oinks	
 /old	old	olde	
+/oldtim	oldtime	oldtimer	
 /omelett	omelette	omelettes	
 /omin	ominous	ominously	
 /one	one	ones	
 /ooh	ooh	oohing	oohs	
 /oop	oop	oops	
 /oopsi	oopsie	oopsies	
+/opal	opal	opals	
 /open	open	opened	opener	opening	openings	opens	
 /operat	operatic	operatically	
 /opinion	opinion	opinions	
@@ -2005,8 +2141,7 @@
 /orchard	orchard	orchards	
 /orchestr	orchestral	orchestrating	
 /order	order	ordered	ordering	orders	
-/organ	organ	organic	organisms	organization	organize	organized	organizer	organizes	organizing	
-/orient	oriental	oriented	
+/organ	organ	organic	organisms	organization	organizations	organize	organized	organizer	organizes	organizing	
 /origin	origin	original	originality	originally	originals	
 /ornament	ornament	ornaments	
 /other	other	others	
@@ -2027,11 +2162,13 @@
 /overpack	overpack	overpacked	
 /overreact	overreacted	overreacting	
 /overse	oversee	overseeing	
+/overwat	overwater	overwatering	
 /overwhelm	overwhelm	overwhelmed	overwhelming	overwhelms	
 /owe	owe	owed	owes	owing	
 /owl	owl	owls	
 /own	own	owning	owns	
 /owner	owner	owners	
+/pa	pa	pas	
 /pace	pace	paced	paces	pacing	
 /pack	pack	packed	packing	packs	
 /packag	package	packages	
@@ -2046,22 +2183,21 @@
 /pamper	pamper	pampered	pampering	
 /pan	pan	pans	
 /pancak	pancake	pancakes	
-/panel	panel	panels	
 /panic	panic	panics	
 /panick	panicked	panicking	
 /pant	pant	panting	pants	
 /papa	papa	papas	
 /paper	paper	papers	
-/parad	parade	parading	
+/parad	parade	parades	parading	
 /parasprit	parasprite	parasprites	
 /parchment	parchment	parchments	
 /pardon	pardon	pardons	
-/parent	parent	parental	parents	
+/parent	parent	parents	
 /park	park	parking	
 /parrot	parrot	parrots	
 /parsnip	parsnip	parsnips	
 /part	part	parted	parting	parts	
-/parti	partied	parties	party	partying	
+/parti	partied	parties	party	partying	partys	
 /particip	participant	participate	participating	participation	
 /partner	partner	partnered	partnering	partners	
 /pass	pass	passed	passes	passing	
@@ -2069,7 +2205,7 @@
 /passeng	passenger	passengers	
 /passion	passion	passionate	passions	
 /past	past	paste	pastelis	
-/pastri	pastries	pastry	
+/pastri	pastries	pastry	pastrys	
 /pastur	pasture	pastures	
 /pat	pat	patting	
 /patch	patch	patched	patches	
@@ -2083,7 +2219,6 @@
 /paw	paw	paws	
 /pay	pay	paying	
 /payment	payment	payments	
-/pea	pea	peas	
 /peac	peace	peaceful	peacefully	
 /peach	peach	peaches	
 /peacock	peacock	peacocks	
@@ -2096,6 +2231,7 @@
 /pedi	pedi	pedied	
 /peel	peel	peeled	peels	
 /peer	peer	peered	peers	
+/peewe	peewee	peewees	
 /pen	pen	penned	pens	
 /pencil	pencil	pencils	
 /pendant	pendant	pendants	
@@ -2112,9 +2248,13 @@
 /persuad	persuade	persuading	
 /pet	pet	pets	petting	
 /petal	petal	petals	
+/pete	pete	petes	
 /petit	petition	petitions	
 /petrifi	petrified	petrify	petrifying	
+/pettington	pettington	pettingtons	
 /petunia	petunia	petunias	
+/pff	pff	pffs	
+/pharaoh	pharaoh	pharaohs	
 /phase	phase	phasing	
 /phoenix	phoenix	phoenixes	
 /phone	phone	phones	
@@ -2134,11 +2274,13 @@
 /pillow	pillow	pillows	
 /pin	pin	pinned	pins	
 /pinch	pinch	pinched	pinching	
+/pincushion	pincushion	pincushions	
 /pine	pine	pining	
 /pineappl	pineapple	pineapples	
 /ping	ping	pinging	pings	
 /pink	pink	pinks	
 /pinki	pinki	pinkie	pinkies	pinky	
+/pip	pip	pips	
 /pipe	pipe	pipes	
 /pirat	pirate	pirates	
 /pirouett	pirouette	pirouettes	
@@ -2146,6 +2288,7 @@
 /pit	pit	pits	
 /pitch	pitch	pitched	pitches	pitching	
 /piti	pitiful	pity	
+/pizza	pizza	pizzas	
 /piã±ata	piã±ata	piã±atas	
 /place	place	placed	places	placing	
 /plagu	plague	plagued	plagues	
@@ -2154,7 +2297,7 @@
 /plank	plank	planks	
 /planner	planner	planners	
 /plant	plant	planted	planting	plants	
-/plate	plate	plated	plates	
+/plate	plate	plates	
 /platform	platform	platforms	
 /play	play	played	playful	playing	plays	
 /player	player	players	
@@ -2168,24 +2311,28 @@
 /pluck	pluck	plucked	
 /plug	plug	plugged	
 /plumb	plumb	plumbing	
+/pluson	plusone	plusones	
 /po	po	poing	
 /pocket	pocket	pockets	
 /pod	pod	pods	
 /poem	poem	poems	
 /point	point	pointed	pointing	points	
-/pointer	pointer	pointers	
 /poison	poison	poisoned	poisonous	
 /poke	poke	poked	poking	
 /polish	polish	polished	
 /polit	polite	politely	political	politics	
+/polomar	polomare	polomares	
+/pommel	pommel	pommels	
 /poncho	poncho	ponchos	
-/poni	ponied	ponies	pony	
+/poni	ponied	ponies	pony	ponys	
+/ponydragon	ponydragon	ponydragons	
+/ponyup	ponyup	ponyups	
+/ponyvil	ponyville	ponyvilles	
 /poodl	poodle	poodles	
 /poof	poof	poofing	poofs	
 /pool	pool	pools	
 /pooper	pooper	poopers	
 /pop	pop	popped	popping	pops	
-/popul	populated	population	
 /popular	popular	popularity	
 /porcupin	porcupine	porcupines	
 /portal	portal	portals	
@@ -2195,6 +2342,7 @@
 /possibl	possibilities	possibility	possible	possibly	
 /post	post	posted	posts	
 /postcard	postcard	postcards	
+/postcrush	postcrush	postcrushs	
 /poster	poster	posters	
 /postpon	postpone	postponed	
 /pot	pot	pots	potted	
@@ -2236,6 +2384,7 @@
 /prim	prim	primmed	
 /princ	prince	princely	princes	
 /princess	princess	princesses	princessness	
+/princesss	princesss	princesssized	
 /princip	principal	principals	
 /print	print	printed	printing	prints	
 /prioriti	priorities	priority	
@@ -2258,29 +2407,29 @@
 /promis	promise	promised	promises	promising	
 /promot	promote	promoted	promoting	promotion	
 /pronounc	pronounce	pronounced	pronouncing	
-/proof	proof	proofed	proofing	
 /prop	prop	props	
-/propel	propelled	propelling	
 /properti	properties	property	
 /propheci	prophecies	prophecy	
 /propos	proposal	proposals	propose	proposed	proposing	
 /protect	protect	protected	protecting	protection	protective	protects	
 /protest	protest	protesting	
+/protã©gã©	protã©gã©	protã©gã©s	
 /prove	prove	proved	proves	proving	
 /provid	provide	provided	providence	provider	provides	providing	
 /prune	prune	pruning	
 /psych	psych	psyche	psyched	
 /psychic	psychic	psychically	
 /publish	publish	published	publisher	
-/pucker	puckered	puckering	
 /puckwudgi	puckwudgie	puckwudgies	
 /pud	pudding	puddings	
+/puddinghead	puddinghead	puddingheads	
 /puddl	puddle	puddles	
 /puf	puffed	puffing	
 /puff	puff	puffs	
 /pull	pull	pulled	pulling	pulls	
 /pump	pump	pumped	pumping	
 /pumpkin	pumpkin	pumpkining	pumpkins	
+/pumpkywumpkin	pumpkywumpkin	pumpkywumpkins	
 /pun	pun	puns	
 /punch	punch	punched	punches	punching	
 /punctual	punctual	punctuality	
@@ -2307,6 +2456,7 @@
 /quesadilla	quesadilla	quesadillas	
 /quest	quest	quests	
 /question	question	questioned	questioning	questions	
+/quibbl	quibble	quibbles	
 /quiet	quiet	quiets	
 /quill	quill	quills	
 /quilt	quilt	quilting	quilts	
@@ -2317,7 +2467,6 @@
 /racer	racer	racers	
 /rack	rack	racked	racking	
 /radic	radical	radicalness	
-/rag	rag	ragged	
 /rage	rage	raged	raging	
 /rain	rain	rained	raining	rains	
 /rainboom	rainboom	rainbooming	rainbooms	
@@ -2325,8 +2474,8 @@
 /rais	raise	raised	raises	raising	
 /rake	rake	rakes	raking	
 /ralli	rallied	rallies	rallying	
-/rap	rap	rapping	
 /rare	rare	rarely	raring	
+/rariti	rarity	raritys	
 /raspberri	raspberries	raspberry	
 /rat	rat	rats	
 /rate	rate	rated	rates	rating	
@@ -2388,9 +2537,10 @@
 /relax	relax	relaxation	relaxed	relaxes	relaxing	
 /releas	release	released	releasing	
 /relic	relic	relics	
+/relight	relight	relighting	
 /reliv	relive	reliving	
 /remain	remain	remained	remaining	remains	
-/remark	remarkable	remarkably	remarks	
+/remark	remark	remarkable	remarkably	remarks	
 /remedi	remedies	remedy	
 /rememb	remember	remembered	remembering	remembers	
 /remind	remind	reminded	reminder	reminders	reminding	reminds	
@@ -2406,7 +2556,7 @@
 /replac	replace	replaced	replacement	replacing	
 /replant	replanted	replanting	
 /repli	replied	reply	
-/report	report	reporter	reporting	reports	
+/report	report	reporter	reporters	reporting	reports	
 /repres	represent	representative	represented	representing	represents	
 /represent	representation	representations	
 /repuls	repulsed	repulsive	
@@ -2421,8 +2571,9 @@
 /reserv	reservation	reservations	reserve	reserved	reserves	
 /reservist	reservist	reservists	
 /reset	reset	resets	
+/reshelv	reshelve	reshelved	reshelving	
 /resid	residence	residency	resident	residents	resides	
-/resist	resist	resistance	resistant	
+/resist	resist	resistance	
 /resolv	resolve	resolved	
 /resourc	resourceful	resources	
 /respect	respect	respectable	respected	respectful	respectfully	respecting	
@@ -2450,11 +2601,13 @@
 /rewind	rewind	rewinding	
 /rhineston	rhinestone	rhinestones	
 /rhyme	rhyme	rhymes	rhyming	rhymings	
+/rhythm	rhythm	rhythms	
 /rhythmic	rhythmic	rhythmically	
 /ribbon	ribbon	ribbons	
-/rich	rich	riches	
+/rich	rich	riches	richs	
 /riddl	riddle	riddles	
 /ride	ride	rides	riding	
+/rider	rider	riders	
 /ridicul	ridiculous	ridiculously	
 /rift	rift	rifts	
 /rig	rigged	rigging	
@@ -2476,6 +2629,8 @@
 /roc	roc	rocs	
 /rock	rock	rocked	rocking	rocks	
 /rocket	rocket	rocketed	rockets	
+/rockhoof	rockhoof	rockhoofs	
+/rocktor	rocktor	rocktorate	
 /rodent	rodent	rodents	
 /rodeo	rodeo	rodeos	
 /rogu	rogue	rogues	
@@ -2483,7 +2638,7 @@
 /roll	roll	rolled	rolling	rolls	
 /rooki	rookie	rookies	
 /room	room	rooms	
-/roomi	roomie	roomies	roomy	
+/roomi	roomies	roomy	
 /rooster	rooster	roosters	
 /root	root	rooting	roots	
 /rope	rope	roped	ropes	roping	
@@ -2510,6 +2665,8 @@
 /rumor	rumor	rumors	
 /rump	rump	rumps	
 /run	run	running	runs	
+/runt	runt	runts	
+/runthrough	runthrough	runthroughs	
 /rush	rush	rushed	rushing	
 /rustl	rustle	rustles	rustling	
 /sabotag	sabotage	sabotaged	
@@ -2527,7 +2684,8 @@
 /same	same	sameness	
 /sampl	sample	samples	
 /sand	sand	sanded	
-/sandwich	sandwich	sandwiches	
+/sandbar	sandbar	sandbars	
+/sandwich	sandwich	sandwiches	sandwichs	
 /sap	sap	sapped	
 /sapphir	sapphire	sapphires	
 /sarcast	sarcastic	sarcastically	
@@ -2539,21 +2697,22 @@
 /scale	scale	scales	
 /scar	scar	scars	
 /scare	scare	scared	scares	scaring	
-/scene	scene	scenes	
-/scent	scent	scented	
+/scaredyponi	scaredyponies	scaredypony	
+/scari	scary	scarys	
 /schedul	schedule	scheduled	schedules	scheduling	
 /scheme	schemes	scheming	
 /school	school	schooled	schools	
 /schoolponi	schoolponies	schoolpony	
-/scienc	science	scienced	
 /scientif	scientific	scientifically	
 /scoff	scoff	scoffs	
 /scone	scone	scones	
 /scoop	scoop	scooped	
-/scoot	scoot	scooting	
+/scoot	scoot	scooting	scoots	
+/scootaloo	scootaloo	scootaloos	
 /scooter	scooter	scootering	scooters	
 /score	score	scored	scores	scoring	
 /scorer	scorer	scorers	
+/scorpan	scorpan	scorpans	
 /scout	scout	scouting	scouts	
 /scrapbook	scrapbook	scrapbooking	
 /scratch	scratch	scratched	scratches	scratching	
@@ -2570,6 +2729,7 @@
 /seal	seal	sealed	seals	
 /seam	seam	seams	
 /seaponi	seaponies	seapony	
+/seaquestria	seaquestria	seaquestrias	
 /search	search	searched	searching	
 /season	season	seasoned	seasons	
 /seat	seat	seated	seating	seats	
@@ -2581,13 +2741,13 @@
 /sediment	sedimental	sediments	
 /see	see	seeing	sees	
 /seed	seed	seeds	
+/seedlin	seedlin	seedlins	
 /seek	seek	seeking	seeks	
 /seem	seem	seemed	seems	
 /select	select	selected	selection	
 /selfi	selfie	selfies	
 /selfish	selfish	selfishness	
 /sell	sell	selling	sells	
-/seller	seller	sellers	
 /send	send	sending	sends	
 /sens	sense	sensed	senses	sensing	
 /sensat	sensation	sensational	
@@ -2596,6 +2756,7 @@
 /separ	separate	separated	separating	separation	
 /sequenc	sequence	sequences	
 /seren	serene	serenity	
+/serenad	serenade	serenades	
 /seri	seri	series	
 /serpent	serpent	serpents	
 /serv	serve	served	serves	serving	
@@ -2618,12 +2779,12 @@
 /share	share	shared	sharing	
 /shatter	shatter	shattered	shattering	shatters	
 /shave	shave	shaved	shaving	
+/she	she	shes	
 /shear	shear	shears	
 /shed	shed	shedding	
 /sheet	sheet	sheets	
 /shell	shell	shells	
-/shelv	shelve	shelved	shelves	shelving	
-/shi	shi	shy	
+/shelv	shelve	shelves	
 /shield	shield	shielded	shields	
 /shift	shift	shifts	
 /shimmer	shimmer	shimmered	shimmering	shimmers	
@@ -2632,6 +2793,7 @@
 /ship	ship	ships	
 /shirt	shirt	shirts	
 /shiver	shiver	shivering	shivers	
+/shmariti	shmarity	shmaritys	
 /shock	shock	shocked	shocking	
 /shoe	shoe	shoes	
 /shoot	shoot	shooting	shoots	
@@ -2659,18 +2821,20 @@
 /si	si	sis	
 /sibl	sibling	siblings	
 /sick	sick	sickness	
-/side	side	sided	sides	
+/side	side	sides	
 /sidekick	sidekick	sidekicks	
 /sidelin	sidelined	sidelines	
 /sidewalk	sidewalk	sidewalks	
 /sigh	sigh	sighing	sighs	
-/sight	sight	sighted	sights	
+/sight	sight	sights	
+/sightse	sightsee	sightseeing	
 /sign	sign	signed	signing	signs	
 /signal	signal	signals	
 /signific	significance	significant	
 /silent	silent	silently	
 /silic	silicate	silicates	
 /silli	sillies	silliness	silly	
+/silverstream	silverstream	silverstreams	
 /simultan	simultaneous	simultaneously	
 /sincer	sincere	sincerely	
 /sing	sing	singing	sings	
@@ -2679,18 +2843,18 @@
 /sink	sink	sinking	sinks	
 /sip	sip	sipping	sips	
 /sir	sir	sirs	
-/sire	sire	siree	
+/sire	sire	siree	sires	
 /siren	siren	sirens	
 /sister	sister	sisters	
 /sit	sit	sits	sitting	
 /site	site	sites	
 /situat	situation	situations	
-/size	size	sized	sizes	
+/size	size	sizes	
 /sizzl	sizzle	sizzling	
 /skate	skates	skating	
 /skedaddl	skedaddle	skedaddling	
 /sketch	sketch	sketched	sketching	
-/ski	ski	skiing	skis	
+/ski	skiing	skis	skys	
 /skid	skidding	skids	
 /skill	skill	skills	
 /skin	skin	skins	
@@ -2702,7 +2866,7 @@
 /sky	skies	sky	
 /slam	slam	slammed	slamming	slams	
 /slap	slap	slapped	slapping	slaps	
-/slash	slash	slashes	slashing	
+/slash	slashes	slashing	
 /slave	slaved	slaves	
 /sleep	sleep	sleeping	sleeps	
 /sleeper	sleeper	sleepers	
@@ -2723,11 +2887,13 @@
 /slurp	slurp	slurping	slurps	
 /smack	smack	smacking	smacks	
 /smart	smart	smarts	
-/smarti	smartie	smarty	
 /smash	smash	smashed	smashes	smashing	
 /smell	smell	smelled	smelling	smells	
 /smile	smile	smiled	smiles	smiling	
+/smirk	smirk	smirks	
+/smith	smith	smiths	
 /smoke	smoke	smoked	smokes	
+/smolder	smolder	smolders	
 /smooch	smooch	smooches	smooching	
 /smoothi	smoothie	smoothies	
 /snack	snack	snacking	snacks	
@@ -2752,23 +2918,32 @@
 /snout	snout	snouts	
 /snow	snow	snowing	
 /snowbal	snowball	snowballs	
+/snowfal	snowfall	snowfalls	
 /snowflak	snowflake	snowflakes	
 /soak	soak	soaked	soaking	soaks	
 /soar	soar	soared	soaring	soars	
+/soarin	soarin	soarins	
 /sob	sob	sobbing	sobs	
 /social	social	socialize	socializing	socials	
 /sock	sock	socks	
 /sofa	sofa	sofas	
+/softpad	softpad	softpads	
 /soldier	soldier	soldiers	
 /sole	sole	solely	
 /solid	solid	solids	
 /solo	solo	soloing	
-/solut	solutely	solution	
 /solv	solve	solved	solves	solving	
-/someponi	someponies	somepony	
-/someth	someth	something	somethings	
+/sombra	sombra	sombras	
+/somebodi	somebody	somebodys	
+/someon	someone	someones	
+/someponi	someponies	somepony	someponys	
+/someth	something	somethings	
+/somethin	somethin	somethins	
 /sometim	sometime	sometimes	
+/somewher	somewhere	somewheres	
+/somnambula	somnambula	somnambulas	
 /song	song	songs	
+/soot	soot	soots	
 /sooth	soothe	soothing	
 /sophist	sophisticated	sophistication	
 /sorcer	sorcerer	sorcerers	
@@ -2776,9 +2951,11 @@
 /soufflã©	soufflã©	soufflã©s	
 /soul	soul	souls	
 /sound	sound	sounded	sounding	sounds	
+/soup	soup	soups	
 /sourc	source	sourced	sources	
 /souvenir	souvenir	souvenirs	
-/space	space	spaced	spaces	
+/spa	spa	spas	
+/space	space	spaces	
 /spar	spar	spars	
 /spare	spare	spares	
 /spark	spark	sparking	sparks	
@@ -2796,17 +2973,18 @@
 /speedster	speedster	speedsters	
 /spell	spell	spelled	spelling	spells	
 /spend	spend	spending	spends	
-/spi	spi	spies	spy	spying	
+/spi	spies	spy	spying	
 /spice	spice	spiced	spices	
 /spider	spider	spiders	
 /spike	spike	spiked	spikes	
 /spill	spill	spilled	spills	
 /spin	spin	spinning	spins	
 /spine	spine	spines	
+/spinout	spinout	spinouts	
 /spiral	spiral	spiraling	
-/spire	spire	spires	
 /spirit	spirit	spirits	
 /spit	spit	spits	spitting	
+/spitfir	spitfire	spitfires	
 /splash	splash	splashed	splashes	splashing	
 /splat	splat	splats	splatting	
 /splatter	splatter	splattered	splattering	
@@ -2821,6 +2999,7 @@
 /sport	sport	sporting	sports	
 /sporti	sportiness	sporty	
 /sportsponi	sportsponies	sportspony	
+/spose	spose	sposed	
 /spot	spot	spots	spotted	
 /spotlight	spotlight	spotlights	
 /sprain	sprain	sprained	
@@ -2847,6 +3026,7 @@
 /squirrel	squirrel	squirrels	
 /squirt	squirt	squirting	squirts	
 /squish	squish	squished	squishing	
+/squizard	squizard	squizards	
 /stabl	stable	stables	
 /stack	stack	stacking	stacks	
 /stage	stage	stages	staging	
@@ -2863,6 +3043,8 @@
 /standard	standard	standards	
 /star	star	starring	stars	
 /stare	stare	stared	stares	staring	
+/starlight	starlight	starlights	
+/starstreak	starstreak	starstreaks	
 /starswirl	starswirl	starswirled	
 /start	start	started	starting	starts	
 /startl	startle	startled	startling	
@@ -2894,7 +3076,7 @@
 /stop	stop	stopped	stopping	stops	
 /stopper	stopper	stoppers	
 /store	store	stored	stores	
-/stori	stories	story	
+/stori	stories	story	storys	
 /storm	storm	stormed	storms	
 /straighten	straighten	straightening	
 /strain	strain	strained	straining	strains	
@@ -2904,7 +3086,7 @@
 /strangl	strangled	strangles	
 /strap	strap	strapped	strapping	
 /straw	straw	straws	
-/strawberri	strawberries	strawberry	
+/strawberri	strawberries	strawberry	strawberrys	
 /streamer	streamer	streamers	
 /street	street	streets	
 /strength	strength	strengths	
@@ -2924,6 +3106,7 @@
 /student	student	students	
 /studi	studied	studies	study	studying	
 /stuf	stuf	stuffed	stuffing	
+/stuff	stuff	stuffs	
 /stumbl	stumble	stumbled	
 /stunt	stunt	stunts	
 /stupend	stupendous	stupendously	
@@ -2942,25 +3125,28 @@
 /suffer	suffer	suffered	suffering	
 /sugarcub	sugarcube	sugarcubes	
 /sugarplum	sugarplum	sugarplums	
-/suggest	suggest	suggested	suggesting	suggestion	suggestions	
+/suggest	suggest	suggested	suggesting	suggestings	suggestion	suggestions	
 /suit	suit	suite	suited	suites	suits	
 /suitcas	suitcase	suitcases	
 /sum	sum	sums	
+/summer	summer	summers	
 /summon	summon	summoned	summoning	summons	
+/sun	sun	suns	
+/sunburst	sunburst	sunbursts	
 /sunda	sundae	sundaes	
 /sunflow	sunflower	sunflowers	
 /sunset	sunset	sunsets	
 /superhero	superhero	superheroes	
 /superl	superlative	superlatives	
 /supernatur	supernatural	supernaturals	
-/superpow	superpower	superpowers	
+/superpow	superpower	superpowerful	superpowers	
 /superstar	superstar	superstars	
 /supervis	supervise	supervising	supervision	
 /suppli	supplies	supply	
 /support	support	supported	supporter	supporting	supportive	
 /suppos	suppose	supposed	
 /sure	sure	surely	
-/surf	surf	surfing	
+/surf	surf	surfing	surfs	
 /surg	surge	surges	surging	
 /surpris	surprise	surprised	surprises	surprising	
 /surrend	surrender	surrendering	
@@ -2972,6 +3158,7 @@
 /suspici	suspicious	suspiciously	
 /suspicion	suspicion	suspicions	
 /sustain	sustain	sustaining	
+/svengallop	svengallop	svengallops	
 /swallow	swallow	swallowed	swallowing	swallows	
 /swamp	swamp	swamped	
 /swan	swan	swans	
@@ -2985,7 +3172,7 @@
 /swell	swell	swelling	
 /swim	swim	swimming	
 /swing	swing	swinging	swings	
-/swirl	swirl	swirled	swirling	
+/swirl	swirl	swirled	swirling	swirls	
 /switch	switch	switched	switching	
 /swoon	swoon	swooning	swoons	
 /swoop	swoop	swooped	
@@ -3001,7 +3188,7 @@
 /tact	tact	tactfully	
 /tactic	tactic	tactics	
 /taffi	taffies	taffy	
-/tail	tail	tailed	tails	
+/tail	tail	tails	
 /tailor	tailor	tailored	tailoring	
 /take	take	takes	taking	
 /taker	taker	takers	
@@ -3016,12 +3203,14 @@
 /tank	tank	tanks	
 /tap	tap	tapped	tapping	taps	
 /tapestri	tapestries	tapestry	
+/target	target	targets	
 /tart	tart	tarts	
 /task	task	tasked	tasks	
 /tast	taste	tasted	tastes	tasting	
+/tastetest	tastetest	tastetester	tastetesting	
 /tater	tater	taters	
 /tatzlwurm	tatzlwurm	tatzlwurms	
-/tax	tax	taxes	taxing	
+/tax	taxes	taxing	
 /tea	tea	teas	
 /teach	teach	teaches	teaching	
 /teacher	teacher	teachers	
@@ -3043,7 +3232,8 @@
 /tender	tender	tenderness	
 /tent	tent	tentatively	tents	
 /term	term	terms	
-/terribl	terrible	terribly	
+/terramar	terramar	terramars	
+/terribl	terrible	terribles	terribly	
 /terrif	terrific	terrifically	
 /terrifi	terrified	terrify	terrifying	
 /terror	terror	terrorize	terrorized	
@@ -3052,16 +3242,18 @@
 /textur	texture	textures	
 /thang	thang	thangs	
 /thank	thank	thanked	thankful	thankfully	thanking	thanks	
+/that	that	thats	
+/thatthat	thatthat	thatthats	
 /theater	theater	theaters	
 /their	their	theirs	
 /theme	theme	themed	
 /theori	theories	theory	
+/there	there	thered	theres	
 /thi	this	thy	
 /thiev	thieves	thieving	
 /thing	thing	things	
 /thingi	thingies	thingy	
 /think	think	thinking	thinks	
-/third	third	thirds	
 /thorn	thorn	thorns	
 /thought	thought	thoughtful	thoughts	
 /thoughtless	thoughtless	thoughtlessness	
@@ -3073,52 +3265,63 @@
 /thrill	thrill	thrilled	thrilling	
 /thrive	thrive	thriving	
 /throat	throat	throats	
-/through	through	throughs	
 /throw	throw	throwing	throws	
 /throwback	throwback	throwbacks	
 /thrust	thrust	thrusts	
 /thud	thud	thudding	thuds	
 /thump	thump	thumping	thumps	
 /thunder	thunder	thunderation	thundering	thunderous	
+/thunderlan	thunderlane	thunderlanes	
 /thunk	thunk	thunking	thunks	
 /thwack	thwack	thwacking	
 /thwart	thwart	thwarts	
 /ti	ti	tis	
+/tiara	tiara	tiaras	
 /tick	tick	ticked	ticking	ticks	
 /ticket	ticket	tickets	
 /tickl	tickle	tickled	tickles	
 /tide	tide	tides	tidings	
-/tie	tie	tied	ties	tying	
+/tie	tie	tied	ties	
 /tiger	tiger	tigers	
 /tight	tight	tights	
 /tighten	tighten	tightening	
+/timber	timber	timbers	
+/timberwolf	timberwolf	timberwolfs	
 /time	time	times	timing	
 /tin	tin	tins	
 /ting	ting	tinge	
-/tingl	tingle	tingling	
 /tip	tip	tipped	tips	
 /tipto	tiptoe	tiptoeing	
 /tire	tire	tired	tires	
+/tirek	tirek	tireks	
 /titl	title	titles	
+/titleit	titleit	titleits	
+/titlemag	titlemagic	titlemagical	
+/titleon	titleon	titleone	
+/titlesecret	titlesecret	titlesecrets	
+/titlesh	titleshe	titleshes	
+/titletwilight	titletwilight	titletwilights	
 /titter	tittering	titters	
 /toast	toast	toasted	
-/toe	toe	toes	
+/today	today	todays	
+/todo	todo	todos	
 /toenail	toenail	toenails	
 /togeth	together	togetherness	
 /toil	toile	toiled	toilings	toils	
 /tomat	tomater	tomatered	tomaters	
 /tomato	tomato	tomatoes	
+/tomorrow	tomorrow	tomorrows	
 /ton	ton	tons	
+/tonatiuh	tonatiuh	tonatiuhs	
 /tone	tone	toned	tones	
 /tongu	tongue	tongues	
 /tonic	tonic	tonics	
-/toodl	toodle	toodles	
+/tonight	tonight	tonights	
 /tool	tool	tooled	tools	
 /toot	toot	toots	
 /toothbrush	toothbrush	toothbrushes	
 /top	top	topped	toppings	tops	
 /toppl	toppled	toppling	
-/tor	tor	tors	
 /torch	torch	torches	
 /tortois	tortoise	tortoises	
 /toss	toss	tossed	tossing	
@@ -3135,12 +3338,12 @@
 /toy	toy	toys	
 /trace	trace	traced	
 /track	track	tracking	tracks	
-/trade	trade	traded	trading	
-/trader	trader	traders	
+/trade	trade	traded	trades	trading	
 /tradit	tradition	traditional	traditionally	traditions	
 /trail	trail	trailing	trails	
 /train	train	trained	training	trains	
 /trait	trait	traits	
+/traitor	traitor	traitors	
 /tranc	trance	trances	
 /transfer	transfer	transferred	
 /transform	transform	transformation	transformed	transforming	transforms	
@@ -3160,7 +3363,7 @@
 /trend	trend	trending	trends	
 /trendsett	trendsetter	trendsetters	
 /trespass	trespassers	trespassing	
-/tri	tri	tried	tries	try	trying	
+/tri	tried	tries	try	trying	
 /trial	trial	trials	
 /tribe	tribe	tribes	
 /trick	trick	tricked	tricking	tricks	
@@ -3168,33 +3371,38 @@
 /trim	trim	trimmed	
 /trimmer	trimmer	trimmers	
 /trip	trip	tripped	tripping	trips	
+/triplecheck	triplecheck	triplechecked	
 /triplic	triplicate	triplicates	
+/trixi	trixie	trixies	
 /trophi	trophies	trophy	
 /trot	trot	trots	trotted	trotting	
+/trotter	trotter	trotters	
 /troubl	trouble	troubled	troubles	
 /troup	troupe	troupes	
+/trrrrixi	trrrrixie	trrrrixies	
 /trumpet	trumpet	trumpeting	trumpets	
 /trust	trust	trusted	trusting	trusts	
 /tryout	tryout	tryouts	
+/tshirt	tshirt	tshirts	
 /tub	tub	tubs	
 /tuck	tuck	tucked	
 /tuesday	tuesday	tuesdays	
 /tuft	tuft	tufted	tufts	
 /tumbl	tumble	tumbling	
 /tumblewe	tumbleweed	tumbleweeds	
-/tummi	tummies	tummy	
+/tummi	tummies	tummy	tummys	
 /tune	tune	tuned	tunes	tuning	
 /tunnel	tunnel	tunnels	
+/tureen	tureen	tureens	
 /turn	turn	turned	turning	turns	
 /turnip	turnip	turnips	
 /turnov	turnover	turnovers	
 /turtl	turtle	turtles	
 /tussl	tussle	tussling	
-/tute	tutely	tutes	
 /tutor	tutor	tutors	
 /tweak	tweak	tweaked	tweaks	
 /tweet	tweet	tweeting	tweets	
-/twilight	twilight	twilights	
+/twilight	twilight	twilighting	twilights	
 /twin	twin	twins	
 /twinkl	twinkle	twinkling	
 /twirl	twirl	twirling	
@@ -3203,9 +3411,10 @@
 /twitter	twittering	twitters	
 /type	type	types	
 /typewrit	typewriter	typewriters	
+/uh	uh	uhhing	
 /ultim	ultimate	ultimately	
+/um	um	umming	
 /umbrella	umbrella	umbrellas	
-/un	un	uns	
 /unappreci	unappreciated	unappreciative	
 /unbear	unbearable	unbearably	
 /unbeliev	unbelievable	unbelievably	
@@ -3230,7 +3439,7 @@
 /unifi	unified	unify	
 /uniform	uniform	uniforms	
 /unit	unit	unite	united	unites	
-/univers	universal	universe	university	
+/univers	universal	universe	university	universitys	
 /unlatch	unlatches	unlatching	
 /unleash	unleash	unleashed	unleashes	
 /unlik	unlike	unlikely	
@@ -3240,10 +3449,10 @@
 /unrol	unrolling	unrolls	
 /unusu	unusual	unusually	
 /unwrap	unwrap	unwrapped	
-/up	up	ups	
 /updat	update	updates	
 /upset	upset	upsets	upsetting	
 /urg	urge	urged	
+/ursa	ursa	ursas	
 /use	use	used	useful	uses	using	
 /user	user	users	
 /usual	usual	usually	
@@ -3257,7 +3466,7 @@
 /vanish	vanish	vanished	
 /vanquish	vanquish	vanquished	
 /vant	vant	vants	
-/vapor	vapor	vaporization	
+/vapor	vapor	vaporization	vapors	
 /vari	varied	varying	
 /variabl	variable	variables	
 /varieti	varieties	variety	
@@ -3277,6 +3486,7 @@
 /victori	victorious	victory	
 /video	video	videos	
 /view	view	viewed	viewings	
+/vignett	vignette	vignettes	
 /villag	village	villager	villagers	villages	
 /villain	villain	villains	
 /vine	vine	vines	
@@ -3293,11 +3503,10 @@
 /vote	vote	voted	votes	voting	
 /vow	vow	vowed	vows	
 /vroom	vroom	vrooming	
-/wa	wa	was	
 /waddl	waddle	waddles	
 /wagon	wagon	wagons	
 /wail	wail	wailing	wails	
-/wait	wait	waited	waiting	waits	
+/wait	wait	waited	waiting	waitings	waits	
 /waiter	waiter	waiters	
 /wake	wake	wakes	waking	
 /walk	walk	walked	walking	walks	
@@ -3306,6 +3515,7 @@
 /want	want	wanted	wanting	wants	
 /warbl	warbles	warbling	
 /warm	warm	warmed	warming	warms	
+/warmup	warmup	warmups	
 /warn	warn	warned	warning	
 /warrant	warranted	warrants	
 /warrior	warrior	warriors	
@@ -3315,28 +3525,32 @@
 /watch	watch	watched	watches	watching	
 /water	water	watering	waters	
 /waterfal	waterfall	waterfalls	
-/wave	wave	waved	waves	waving	
+/wave	wave	waved	waves	
 /wax	wax	waxed	
 /way	way	ways	
 /weak	weak	weakness	weaknesses	
 /weapon	weapon	weapons	
 /wear	wear	wearing	wears	
+/weather	weather	weathers	
 /weav	weave	weaves	weaving	
 /web	web	webs	
-/wed	wedded	wedding	weddings	
+/wed	wed	wedded	wedding	weddings	
 /week	week	weeks	
 /weekend	weekend	weekends	
 /weep	weep	weeping	
 /weigh	weigh	weighs	
 /weird	weird	weirded	
 /welcom	welcome	welcomed	welcoming	
-/well	well	welling	wells	
+/well	well	welling	
 /whack	whack	whacking	whacks	
 /whale	whale	whales	
-/whatev	whatever	whatevs	
+/what	what	whats	
+/whatev	whatever	whatevers	whatevs	
 /wheel	wheel	wheeling	wheels	
 /wheez	wheezes	wheezing	
-/whi	whi	why	
+/when	when	whens	
+/where	where	whered	wheres	
+/whi	why	whys	
 /whicker	whickering	whickers	
 /whim	whim	whims	
 /whimper	whimper	whimpering	whimpers	
@@ -3350,16 +3564,18 @@
 /whisper	whisper	whispered	whispering	whispers	
 /whistl	whistle	whistles	whistling	
 /white	white	whites	
+/who	who	whos	
 /whoa	whoa	whoas	
+/whoever	whoever	whoevers	
 /whoop	whoop	whooped	whooping	whoops	
 /whoopsi	whoopsie	whoopsies	
 /whoosh	whoosh	whooshes	whooshing	
+/whwhat	whwhat	whwhats	
 /wibbl	wibbles	wibbling	
 /wick	wick	wicked	
 /wield	wield	wielded	
 /wilder	wilder	wilderness	
 /will	will	willful	willing	wills	
-/willi	willies	willy	
 /wimp	wimp	wimps	
 /win	win	winning	winnings	wins	
 /winc	winces	wincing	
@@ -3371,6 +3587,7 @@
 /wingponi	wingponies	wingpony	
 /wink	wink	winks	
 /winner	winner	winners	
+/winona	winona	winonas	
 /winterzilla	winterzilla	winterzillas	
 /wipe	wipe	wiped	wipes	wiping	
 /wire	wire	wires	
@@ -3386,6 +3603,7 @@
 /wonderbolt	wonderbolt	wonderbolts	
 /wondercolt	wondercolt	wondercolts	
 /wood	wood	woods	
+/woohoo	woohoo	woohoos	
 /wootsi	wootsie	wootsy	
 /word	word	words	
 /work	work	worked	working	works	
@@ -3406,6 +3624,9 @@
 /wriggl	wriggle	wriggling	
 /wrinkl	wrinkle	wrinkles	
 /write	write	writes	writing	writings	
+/wwhat	wwhat	wwhats	
+/wwwhat	wwwhat	wwwhats	
+/xtreme	xtreme	xtremely	
 /ya	ya	yas	
 /yak	yak	yaks	
 /yank	yank	yanking	
@@ -3413,24 +3634,33 @@
 /yarn	yarn	yarns	
 /yawn	yawn	yawning	yawns	
 /ye	ye	yes	
+/yeah	yeah	yeahs	
 /year	year	years	
+/yearl	yearling	yearlings	
 /yearn	yearning	yearns	
-/yeee	yeee	yeees	
-/yeeee	yeeee	yeeees	
 /yell	yell	yelled	yelling	yells	
 /yelp	yelp	yelping	yelps	
+/yesterday	yesterday	yesterdays	
 /yodel	yodel	yodeling	
-/your	your	yours	
+/yona	yona	yonas	
+/yonder	yonder	yonders	
+/you	you	yous	
+/youngun	youngun	younguns	
+/your	your	youre	yours	
 /youth	youth	youthful	
 /yovidaphon	yovidaphone	yovidaphoner	
 /yowl	yowl	yowling	yowls	
-/yuck	yuck	yucks	
 /zap	zap	zapped	zapping	zaps	
+/zat	zat	zats	
 /zebra	zebra	zebras	
+/zecora	zecora	zecoras	
+/zephyr	zephyr	zephyrs	
 /zero	zero	zeroes	
+/zesti	zesty	zestys	
 /zig	zig	zigged	
 /zip	zip	zipped	zipping	zips	
 /zipper	zipper	zippers	
+/zipporwhil	zipporwhill	zipporwhills	
 /zombi	zombie	zombies	
 /zoom	zoom	zoomed	zooming	zooms	
 /ã©clair	ã©clair	ã©clairs	

@@ -179,11 +179,10 @@ input[type="text"]{
     color: #e16868;
 }
 
-
 #nav-bar-home{
     position: absolute;
     top: 55%;
-    left: 10%;
+    left: 40%;
     right: 40%;
     padding: 35px;
     text-align: center;

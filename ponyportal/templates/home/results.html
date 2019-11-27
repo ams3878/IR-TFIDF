@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="title_results">
-    <a href="https://fontmeme.com/fonts/my-little-pony-font/">
+    <a href=".">
         <img src="https://fontmeme.com/permalink/191119/a3a8a8436acf9f3088d264d383938a34.png"
              alt="my-little-pony-font" border="0"></a>
 </div>
@@ -35,6 +35,8 @@
     </div>
     <div class="tb">
         <div class="td" id="results-frame-3">
+            <h1>Filters:</h1>
+
             {% for f in facets %}
             <div>
                 <input type="checkbox" id="{{f.0}}" name="Season {{f.1}}" onchange="this.form.submit()" {{f.2}}>
@@ -62,6 +64,7 @@
             </ul>
         </div>
         <div class="td" id="results-frame-2">
+            <h1> Related Search</h1>
             {% for r in related %}
             <div>
                 <a href="./results?query={{r.0}}">{{ r.0 }}</a>
