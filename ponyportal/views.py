@@ -174,10 +174,15 @@ def results(request):
         doc_objects.append((Document.objects.filter(id=int(x[0]))[0], x[1]))
     if len(season_filter) > 0:
         season_objects = [e for e in Season.objects.all() if (e.name, e.id, "checked") in facets]
-        doc_objects = [(e.episode, x[1]) for e in SeasonToDocument.objects.filter(
+    season_doc_list = [e.episode for e in SeasonToDocument.objects.filter(
             season__in=[y for y in season_objects],
-            episode__in=[x[0] for x in doc_objects])]
-
+            episode__in=[u[0] for u in doc_objects])]
+    new_doc_list = []
+    for e in doc_objects:
+        if e[0] in season_doc_list:
+            new_doc_list.append(e)
+    doc_objects = sorted(new_doc_list, key=lambda z: z[1], reverse=True)
+    print(doc_objects)
     t2 = time.time_ns()
     # do document summarization on the top 10 results, and highlight the keyword matches
     for i in doc_objects[0:10]:
