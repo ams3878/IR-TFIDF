@@ -1,8 +1,13 @@
+"""
+Collection of functions used to create all the indexes used for IR
+
+indexer.py
+@author Aaron Smith, Grant Larsen
+11/26/2019
+"""
 import re
 import os
-import string
-from nltk.tokenize import word_tokenize
-from .utils import get_index
+from .utils import get_index, clean_text, tokenize_doc
 from .porter import PorterStemmer
 
 INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_index.tsv"
@@ -12,6 +17,13 @@ BIGRAM_INDEX_FILE_NAME = "ponyportal\static\ponyportal\mlp_bigrams.tsv"
 WINDOW_INDEX_FILE_NAME = "./ponyportal\static\ponyportal\mlp_window_index.tsv"
 WINDOW_SIZE = 10
 
+
+# ---------------------------------------------------------------------------------
+# creates document level frequency tsv
+#
+# @input: None
+# @return: None
+# ---------------------------------------------------------------------------------
 def create_index_tsv():
     index = {}
     for filename in os.listdir('./ponyportal/static/episodes'):
@@ -38,7 +50,13 @@ def create_index_tsv():
             line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
             output_file.write(line)
 
-# Creates a tsv containing the index built using non-overlapping windows of size 10
+
+# ---------------------------------------------------------------------------------
+# creates window level frequency tsv with window size of one line
+#
+# @input: None
+# @return: None
+# ---------------------------------------------------------------------------------
 def create_window_index_tsv():
     index = {}
 
@@ -71,6 +89,13 @@ def create_window_index_tsv():
             line = "%s\t%d\t%s\n" % (key, len(index[key].split('\t')), index[key])
             output_file.write(line)
 
+
+# ---------------------------------------------------------------------------------
+# creates tsv with word positions
+#
+# @input: None
+# @return: None
+# ---------------------------------------------------------------------------------
 def create_index_tsv_positions():
     doc_index = {}
     for filename in os.listdir('./ponyportal/static/episodes'):
@@ -96,8 +121,13 @@ def create_index_tsv_positions():
             output_file.write(line)
 
 
-
-
+# ---------------------------------------------------------------------------------
+# creates tsv of all the bigrams, with relation above a given threshold
+#
+# @input: pos_index: dictionary with word positions
+#         freq_index: dictionary with word frequencies
+# @return: None
+# ---------------------------------------------------------------------------------
 def make_bigrams(pos_index, freq_index, threshold):
     with open(BIGRAM_INDEX_FILE_NAME, 'w') as output_file:
         for word_1 in pos_index:
@@ -125,6 +155,13 @@ def make_bigrams(pos_index, freq_index, threshold):
                 output_file.write(line)
 
 
+# ---------------------------------------------------------------------------------
+# creates tsv of stems, only stems with more than one associated words are stored
+# used the porter stemmer to create the stems
+#
+# @input: index_tsv: the tsv of word frequencies
+# @return: None
+# ---------------------------------------------------------------------------------
 def create_stems(index_tsv):
     vocab = list(get_index(index_tsv).keys())
     stemmer = PorterStemmer()
@@ -143,25 +180,3 @@ def create_stems(index_tsv):
                     line = line + "\t" + word
                 line = line + "\t\n"
                 f.write(line)
-
-"""
-Removes the surrounding <html> and <pre> tags and makes the document lowercase.
-"""
-def clean_text(doc):
-    doc = doc.lower()
-    doc = doc.translate(str.maketrans('', '', string.punctuation))
-    return doc
-
-
-"""
-Tokenizes the words in a document then returns a dictionary from each word to its number of occurances in the doc
-"""
-def tokenize_doc(doc):
-    tokens = word_tokenize(doc)
-    doc_index = {}
-    for token in tokens:
-        if token in doc_index:
-            doc_index[token] += 1
-        else:
-            doc_index[token] = 1
-    return doc_index

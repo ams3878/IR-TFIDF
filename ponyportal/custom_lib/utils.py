@@ -1,14 +1,33 @@
+"""
+Utility files used to run Pony Poratal app
+    - create Django objects and relations
+    - create indexes from tsv
+    - clean raw html text
+    - helper functions fo query suggestion and expansion
+    - document summary and query term highlighting
+utils.py
+@author Aaron Smith, Grant Larsen
+11/26/2019
+"""
+
 import re
 import string
 from math import ceil
 from ..models import *
+from nltk.tokenize import word_tokenize
 
 INDEX_FILENAME = 'ponyportal\static\ponyportal\mlp_index.tsv'
 WINDOW_INDEX_FILENAME = 'ponyportal\static\ponyportal\mlp_window_index.tsv'
 DOC_INDEX_FILENAME = 'ponyportal\static\ponyportal\doc_names.tsv'
-MAX_DIST = 2
-NUM_ASSOCIATIONS = 10
 
+
+# ---------------------------------------------------------------------------------
+# creates all the episodes files needed for indexing
+#
+# @input: master: html file of all the episodes
+#         ep_loc: a directory to store the files
+# @return: None
+# ---------------------------------------------------------------------------------
 def create_episode_files(master, ep_loc):
     f = open(master)
     line = f.readline()
@@ -84,8 +103,14 @@ def create_episode_files(master, ep_loc):
         except IndexError:
             pass
     f.close()
-    print("DONE-adding episodes")
 
+
+# ---------------------------------------------------------------------------------
+# create an index from a tsv with the position of words in the document
+#
+# @input: filename: tsv of positions
+# @output: index: dictionary
+# ---------------------------------------------------------------------------------
 def get_pos_index(filename):
     index = {}
     with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
@@ -106,6 +131,12 @@ def get_pos_index(filename):
     return index
 
 
+# ---------------------------------------------------------------------------------
+# create an index from a tsv with all the bigrams in the document
+#
+# @input: filename: tsv of bigrams
+# @output: index: dictionary
+# ---------------------------------------------------------------------------------
 def get_bigrams(filename):
     index = {}
     with open('ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
@@ -122,6 +153,12 @@ def get_bigrams(filename):
     return index
 
 
+# ---------------------------------------------------------------------------------
+# create an index from a tsv with frequency words in the document
+#
+# @input: filename: tsv of frequencies
+# @output: index: dictionary
+# ---------------------------------------------------------------------------------
 def get_index(filename):
     index = {}
     with open( 'ponyportal\static\ponyportal\\' + filename, 'r') as index_file:
@@ -139,6 +176,13 @@ def get_index(filename):
             line = index_file.readline()
     return index
 
+
+# ---------------------------------------------------------------------------------
+# create an index from a tsv with the frequcency of words in  document windows
+# window size is set to be one line
+# @input: None
+# @output: index: dictionary
+# ---------------------------------------------------------------------------------
 def get_window_index():
     index = {}
     with open(WINDOW_INDEX_FILENAME, 'r') as index_file:
@@ -157,6 +201,14 @@ def get_window_index():
             line = index_file.readline()
     return index
 
+
+# ---------------------------------------------------------------------------------
+# create an index from a tsv mapping episdoe number to title, word count
+# and line count
+#
+# @input: None
+# @output: doc_index: dictionary
+# ---------------------------------------------------------------------------------
 def get_docs_index():
     doc_index = {}
     with open(DOC_INDEX_FILENAME, 'r') as doc_file:
@@ -167,6 +219,13 @@ def get_docs_index():
             line = doc_file.readline()
     return doc_index
 
+
+# ---------------------------------------------------------------------------------
+# create an index from a tsv with the stems and their associated words
+#
+# @input: filename: tsv of stems
+# @output: stems: dictionary
+# ---------------------------------------------------------------------------------
 def get_stems(filename):
     stems = {}
     with open('ponyportal\static\ponyportal\\' + filename, 'r') as stem_file:
@@ -178,6 +237,13 @@ def get_stems(filename):
     return stems
 
 
+# ---------------------------------------------------------------------------------
+# removes all html tags from a document, and adds "%%" tag on speakers
+#
+# @input: raw_html: string of txt to be cleaned
+# @output: cleantext: text without tags
+#          taggedtext: text with names tagged
+# ---------------------------------------------------------------------------------
 def cleanhtml(raw_html):
     find_name = re.compile('</dd><dd><b>.*?</b>')
 
@@ -193,6 +259,12 @@ def cleanhtml(raw_html):
     return cleantext, taggedtext
 
 
+# ---------------------------------------------------------------------------------
+# Creates characters by looking at the tagged HTML and adds them to Django model
+#
+# @input: None
+# @ouput: None
+# ---------------------------------------------------------------------------------
 def create_new_chars():
     chars_set = list(Character.objects.all())
     chars = []
@@ -222,6 +294,13 @@ def create_new_chars():
             line = f.readline()
 
 
+# ---------------------------------------------------------------------------------
+# Creates Documents for each episodes, and adds the Character relation if they
+# appear in that episode
+#
+# @input: None
+# @ouput: None
+# ---------------------------------------------------------------------------------
 def create_char_episode():
     for i in range(243):
         f = open('ponyportal\static\episodes\\' + str(i+1))
@@ -254,9 +333,37 @@ def create_char_episode():
             except IndexError:
                 pass
             line = f.readline()
-    print("Done adding chars to docs")
 
 
+# ---------------------------------------------------------------------------------
+# Creates Season django models and adds relations for the episodes to seasons
+#
+# @input: None
+# @ouput: None
+# ---------------------------------------------------------------------------------
+def get_season(episode):
+    if episode <= 52:
+        return ceil(episode / 26)
+    elif episode <= 65:
+        return 3
+    elif episode <= 221:
+        return 3 + ceil((episode - 65) / 26)
+    elif episode <= 239:
+        return 10
+    else:
+        return episode - 239 + 10
+
+
+# ---------------------------------------------------------------------------------
+# Creates document summaries for each related document and highlights
+# any terms that match the query.  Summaries are top 5 lines after scoring each line
+# from its normalized tf*idf
+#
+# @input: term: the list of query terms used by the retrieval algorithm
+#         idf_list: list of idfs calculated by the retrieval algorithm
+#         episode: number of the episode used to get the raw html
+# @return: matched_lines: top 5 of line of the doc sum
+# ---------------------------------------------------------------------------------
 def get_lines_keywords(terms, idf_list, episode):
     f = open('ponyportal\static\episodes\\' + str(episode), 'r')
     stopword_list = get_stopwords()
@@ -297,116 +404,14 @@ def get_lines_keywords(terms, idf_list, episode):
         matched_lines += matched_lines_stop
     return [y[0] for y in sorted(matched_lines[0:5],  key=lambda z: z[1], reverse=True)][0:5]
 
-def get_stopwords():
-    f = open('ponyportal\static\ponyportal\stopwords.txt', 'r')
-    line = f.read()
-    f.close()
-    return line.split(',')
 
-
-def get_season(episode):
-    if episode <= 52:
-        return ceil(episode / 26)
-    elif episode <= 65:
-        return 3
-    elif episode <= 221:
-        return 3 + ceil((episode - 65) / 26)
-    elif episode <= 239:
-        return 10
-    else:
-        return episode - 239 + 10
-
-
-def clean_terms(terms, index, doc_index, window_index, dice_scores):
-    fixed_terms = []
-
-    if len(terms) == 1:
-        adj_term = None
-    else:
-        adj_term = terms[1]
-    for term in terms:
-        if term != terms[0]:
-            adj_term = fixed_terms[-1]
-        if term not in index:
-            most_similar = get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores)
-            print(most_similar)
-            if most_similar not in index and len(most_similar) > 2:
-                for split in range(1, len(most_similar)):
-                    half1 = most_similar[:split]
-                    half2 = most_similar[split:]
-                    if half1 in index and len(half1) > 2:
-                        fixed_terms.append(half1)
-                    if half2 in index and len(half2) > 2:
-                        fixed_terms.append(half2)
-            else:
-                fixed_terms.append(most_similar)
-        else:
-            fixed_terms.append(term)
-    print(fixed_terms)
-    return fixed_terms
-
-
-def get_most_similar(term, adj_term, index, doc_index, window_index, dice_scores):
-    most_similar = term
-    most_similar_score = 0
-    doc_count = len(doc_index)
-    for word in index:
-        if abs(len(word) - len(term)) <= MAX_DIST:
-            if term == word:
-                dist = 0
-            else:
-                dist = get_levenshtein_distance(term, word)
-            if dist <= 3:
-                if dist == 0:
-                    similarity = 1.5
-                else:
-                    similarity = 1 - dist / len(word)
-                usage = int(index[word]['count']) / doc_count
-                if word in window_index and adj_term in window_index:
-                    dice = get_dice_coeff(window_index[adj_term], window_index[word])
-                    if adj_term not in dice_scores:
-                        dice_scores[adj_term] = {}
-                    dice_scores[adj_term][word] = dice
-                else:
-                    dice = 0
-                score = similarity + usage + dice
-                if score > most_similar_score:
-                    most_similar_score = score
-                    most_similar = word
-
-    return most_similar
-
-
-def find_associations(word, terms, window_index, dice_scores):
-    associated_words = []
-    min_coeff = 0
-    indexed_word = window_index[word]
-    if word in dice_scores:
-        dice_index = dice_scores[word]
-    else:
-        dice_index = None
-    for term in window_index:
-        if term not in terms and term not in get_stop_words():
-            compared_term = window_index[term]
-            if dice_index is not None and term in dice_index:
-                dice_coeff = dice_index[term]
-            else:
-                dice_coeff = get_dice_coeff(indexed_word, compared_term)
-            if dice_coeff > min_coeff:
-                if len(associated_words) < NUM_ASSOCIATIONS:
-                    associated_words.append((term, dice_coeff))
-                    if len(associated_words) == NUM_ASSOCIATIONS:
-                        associated_words = sorted(associated_words, key=lambda tup: tup[1], reverse=True)
-                else:
-                    for ind in range(0, NUM_ASSOCIATIONS):
-                        if dice_coeff > associated_words[ind][1]:
-                            associated_words.insert(ind, (term, dice_coeff))
-                            del associated_words[-1]
-                            break
-                min_coeff = associated_words[-1][1]
-    return associated_words
-
-
+# ---------------------------------------------------------------------------------
+# calculate the dice coefficient of two terms
+#
+# @input: term1: list of documents that contain the first term
+#         term2L list of ducuments that contain the second term
+# @output: float: dice coefficient
+# ---------------------------------------------------------------------------------
 def get_dice_coeff(term1, term2):
     term_intersects = 0
     for doc in term1:
@@ -416,6 +421,14 @@ def get_dice_coeff(term1, term2):
     return 2*term_intersects/(term1['count'] + term2['count'])
 
 
+# ---------------------------------------------------------------------------------
+# calculate the levenshtein distance of two words in order to correct spelling
+# errors
+#
+# @input: term1: first term
+#         term2: second word
+# @output: the levenshtein distance
+# ---------------------------------------------------------------------------------
 def get_levenshtein_distance(term1, term2):
     matrix = [[0 for x in range(len(term2) + 1)] for x in range(len(term1) + 1)]
 
@@ -442,23 +455,54 @@ def get_levenshtein_distance(term1, term2):
     return matrix[len(term1)][len(term2)]
 
 
-def get_additional_query_terms(terms, window_index, dice_scores):
-    associations = {}
-
-    for term in terms:
-        for similiar in find_associations(term, terms, window_index, dice_scores):
-            if similiar not in associations:
-                associations[similiar[0]] = 0
-            associations[similiar[0]] += similiar[1]
-
-    similar_terms = []
-    for term in associations:
-        similar_terms.append((term, associations[term]))
-    similar_terms = sorted(similar_terms, key=lambda tup: tup[1], reverse=True)
-    return similar_terms
+# ---------------------------------------------------------------------------------
+# set a string to lower case and remove all punctuations
+#
+# @input: doc: string to clean
+# @return: doc: the cleaned string
+# ---------------------------------------------------------------------------------
+def clean_text(doc):
+    doc = doc.lower()
+    doc = doc.translate(str.maketrans('', '', string.punctuation))
+    return doc
 
 
-# NLTK list of stop words
+# ---------------------------------------------------------------------------------
+# create tokens from a given string, using the nltk tokenizer
+#
+# @input: doc: string to create tokens from
+# @return: doc_index: a dictionary of tokens and their frequency
+# ---------------------------------------------------------------------------------
+def tokenize_doc(doc):
+    tokens = word_tokenize(doc)
+    doc_index = {}
+    for token in tokens:
+        if token in doc_index:
+            doc_index[token] += 1
+        else:
+            doc_index[token] = 1
+    return doc_index
+
+
+# ---------------------------------------------------------------------------------
+# Get stop words from file
+#
+# @input: None
+# @ouput: list of stopwords
+# ---------------------------------------------------------------------------------
+def get_stopwords():
+    f = open('ponyportal\static\ponyportal\stopwords.txt', 'r')
+    line = f.read()
+    f.close()
+    return line.split(',')
+
+
+# ---------------------------------------------------------------------------------
+# Get stopwords from list, given by NTLK
+#
+# @input:
+# @ouput:
+# ---------------------------------------------------------------------------------
 def get_stop_words():
     return ['ourselves', 'hers', 'between', 'yourself', 'but', 'again', 'there', 'about', 'once', 'during', 'out',
             'very', 'having', 'with', 'they', 'own', 'an', 'be', 'some', 'for', 'do', 'its', 'yours', 'such',

@@ -1,15 +1,44 @@
+"""
+Collection of retrieval algorithms
+
+retrieval_algorithms.py
+@author Aaron Smith, Grant Larsen
+11/26/2019
+"""
 import math
 
+# -----
+# BM25 parameters
+# -----
 K_1 = 1.2
 K_2 = 100.0
 B = 0.75
 
+
+# ---------------------------------------------------------------------------------
+# wrapper function to be called to get the related documents
+#
+# @input: terms: list of given query terms
+#         index: dictionary with document word frequencies
+#         doc_index: index with word, and line counts
+#         query_model: string to specify retrieval algorithm to use
+# @return: list of documents(some variation based on algorithm)
+# ---------------------------------------------------------------------------------
 def query(terms, index, doc_index, query_model):
     if query_model == 'tfidf':
         return tfidf(terms, index)
     else:
         return query_bm25(terms, index, doc_index)
 
+
+# ---------------------------------------------------------------------------------
+# get list of documents using basic tf-idf to rank
+#
+# @input: terms: list of given query terms
+#         index: dictionary with document word frequencies
+# @return: doc_scores: list tuples(documents,score)
+#          idf_list: list of idfs for each term(used in doc sum)
+# ---------------------------------------------------------------------------------
 def tfidf(terms, index):
     doc_sums = {}
     doc_scores = []
@@ -41,6 +70,15 @@ def tfidf(terms, index):
     doc_scores = sorted(doc_scores, key=lambda tup: tup[1], reverse=True)
     return doc_scores, idf_list
 
+
+# ---------------------------------------------------------------------------------
+# get list of documents using BM25 to rank
+#
+# @input: terms: list of given query terms
+#         index: dictionary with document word frequencies
+#         doc_index: dictionary for word and line count
+# @return: doc_scores: list tuples(documents,score)
+# ---------------------------------------------------------------------------------
 def query_bm25(terms, index, doc_index):
     term_counts ={}
     for term in terms:
