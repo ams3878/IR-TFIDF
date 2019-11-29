@@ -44,7 +44,6 @@ except FileNotFoundError:
 try:
     DOC_DICT = get_docs_index()
 except FileNotFoundError:
-    # TODO add function for creating doc_names.tsv
     DOC_DICT = get_docs_index()
 
 # Stems
@@ -114,16 +113,21 @@ def results(request):
     t1 = time.time_ns()
     result_dict = {}
     # the query given by the user from GET
-    term_string = request.GET['query'].lower()
+    term_string = request.GET['query'].lower().strip()
     # see if any special commands were given, and execute them
     if term_string[0] == '#':
-        if term_string[1:8] == '#episodes':
+        if term_string[1:9] == 'episodes':
             return episodes(request)
-        elif term_string[1:9] == '#characters':
+        elif term_string[1:11] == 'characters':
             return ponies(request)
         elif term_string[1:8] == 'episode':
-            return render(request, 'episodes_html/' + term_string[8:] + '.html')
-
+            episode_str = term_string[8:].strip()
+            try:
+                episode_num = int(episode_str)
+                if episode_num > 0 and episode_num < 244:
+                    return render(request, 'episodes_html/' + term_string[8:] + '.html')
+            except ValueError:
+                print("Episode not in range 1-243")
     # create a list form the query string
     terms = term_string.split()
     # Store dice scores found while error checking to use later when getting related queries
