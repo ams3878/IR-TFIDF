@@ -378,7 +378,8 @@ def get_lines_keywords(terms, idf_list, episode):
     matched_lines_stop = []
     term_regex = re.compile('(.*)([\W\s])(' + '|'.join(terms_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
     term_regex_stop = re.compile('(.*)([\W\s])(' + '|'.join(stop_dict.keys()) + ')([\W\s])(.*)', re.IGNORECASE)
-
+    # skip the meta line
+    f.readline()
     for line in f:
         line_list = line
         line_list = line_list.lower().translate(str.maketrans('', '', string.punctuation)).split()
