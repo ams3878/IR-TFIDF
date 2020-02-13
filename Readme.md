@@ -1,24 +1,24 @@
-Math Wiki (2019)
+Pony Portal (2019)
 ============
 Aaron Smith:  ams3878@rit.edu
 Grant Larsen: gl9191@rit.edu
+
 Description:
 ---------------
-App that queries the Math Tagged wikipedia Corpus.
+App that queries the My Littple Pony episode corpus.
+
 Imporant Files:
 ---------------
-mysite/
->mathIR/
+IR_p2/
+>ponyportal/
 >>custom_lib/
 >>>All alogorithms used for querying and displaying information
 
 >>static/
->>>idexTSV/
->>>>All .tsv used for indexing 
->>>collectionDocsTSV/html
->>>>the html files that have valid filenames
->>>mathIR/MathTagArticles
->>>>All tar files
+>>>episodes.html
+episodes.txt
+All .tsv used for indexing 
+
 >>templates/home/
 >>>html that displays the user interface (home.html, results.html)
 
@@ -47,5 +47,4 @@ python manage.py runserver
 This will start a webserver of the Pony Portal app on the local host.
 
 From there all interaction will be done from a browser starting at….
-[http://127.0.0.1:8000/ponyportal/](http://127.0.0.1:8000/math/)
-
+[http://127.0.0.1:8000/ponyportal/](http://127.0.0.1:8000/ponyportal/)
